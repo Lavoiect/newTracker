@@ -57,9 +57,6 @@ class ProjectController extends Controller
         if ($request->category_id) {
             $projectByUser->category()->sync($request->category_id);
         };
-
-
-
         return redirect('/projects')->with('status', 'Project added');
     }
     public function show($slug)

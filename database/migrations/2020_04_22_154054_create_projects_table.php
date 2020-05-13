@@ -20,7 +20,7 @@ class CreateProjectsTable extends Migration
             $table->string('meta_desc')->nullable();
             $table->string('title');
             $table->text('body');
-            $table->integer('status')->default(0);
+            $table->integer('status')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });
