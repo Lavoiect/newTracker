@@ -4,9 +4,12 @@
 
 @include('layouts.sideNav')
 <div class="row">
-    <div class="col-3">@yield('sideNav')</div>
-    <div class="col-3">
-       <!-- User View -->
+    <div class="col-2 no-padding">@yield('sideNav')</div>
+    <div class="col-10">
+       <!-- Admin View -->
+       @if (Auth::user() && Auth::user()->role_id === 1)
+
+
            <h1>Users</h1>
                    @foreach ($users as $user)
 
@@ -45,6 +48,17 @@
                  @endforeach
 
     </div>
+    @endif
+
+    @if(Auth::user() && Auth::user()->role_id === 2 || Auth::user()->role_id === 3)
+     <h1>Users</h1>
+        @foreach ($users as $user)
+            <h5>Name:</h5>{{$user->name}}
+            <h5>Email:</h5>{{$user->email}}
+            <h5>Created:</h5>{{ $user->created_at->diffForHumans() }}
+        @endforeach
+    @endif
+
 </div>
 
 @endsection

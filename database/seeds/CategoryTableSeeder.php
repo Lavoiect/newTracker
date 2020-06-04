@@ -19,7 +19,7 @@ class CategoryTableSeeder extends Seeder
 
         $active = new Category();
         $active->name = 'Active';
-        $active->slug = 'Slug';
+        $active->slug = 'active';
         $active->save();
 
         $complete = new Category();

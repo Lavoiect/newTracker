@@ -1,1 +1,134 @@
 /* Custom CSS styles */
+
+/* Overall CSS */
+body {
+    background-color: lightgrey;
+}
+
+.row {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.container-fluid {
+    width: 90%;
+}
+
+.content {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.contentArea {
+    margin-top: 75px;
+}
+
+.navContent {
+    width: 80%;
+    float: right;
+}
+
+/* SideNav Styles */
+.navbar {
+    height: 75px;
+    background-color: #489ced;
+}
+
+.navbar a.nav-link {
+    color: #fff;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+
+.subNav {
+    margin-top: -1.8em;
+    margin-bottom: 1.8em;
+}
+
+.sideNav {
+    height: 100%;
+    width: 18%;
+    position: fixed;
+    z-index: 1;
+    top: 0; /* Stay at the top */
+    left: 0;
+    background: #fff;
+    overflow-x: hidden;
+    padding-top: 75px;
+}
+
+.menu {
+    margin-left: 5%;
+}
+
+.addProject {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+/* Main project table */
+.welcome {
+    margin-top: 95px;
+}
+
+.hide {
+    display: none;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+    bottom: .5em;
+}
+
+.myTable {
+    visibility: hidden;
+}
+
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*  project show page */
+.projectCard {
+    margin-top: 100px !important;
+    padding: 20px;
+    margin: 25px;
+}
+
+.title {
+    padding-left: 15px;
+}

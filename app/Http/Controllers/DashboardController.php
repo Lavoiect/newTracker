@@ -2,16 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Project;
+use App\User;
 use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
 
     public function index()
     {
-        return view('dashboard.index');
+        $category = Category::where('name', 'Active')->first();
+        $upcoming = Category::where('name', 'Upcoming')->first();
+        return view('dashboard.index', compact('category', 'upcoming'));
     }
 
     public function admin()

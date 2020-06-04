@@ -11,23 +11,33 @@
 
     <title>@yield('meta_title'){{ config('app.name', 'Laravel') }}</title>
 
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+     <script src="{{ asset('js/myScripts.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
 
     <!-- Styles -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+
+
 
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-table.min.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md  shadow-sm fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Field Ops Tracker
@@ -47,13 +57,9 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}"><i class="zmdi zmdi-account-circle"></i>{{ __('Login') }}</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -72,8 +78,8 @@
                                     </form>
                                 </div>
                             </li>
-                            <li>
-                            <a href="{{ route('dashboard.home') }}">Dashboard</a>
+                            <li class="nav-item">
+                            <a class="nav-link" href="{{ route('dashboard.home') }}"><i class="zmdi zmdi-view-dashboard"></i></a>
                             </li>
                         @endguest
                     </ul>
@@ -81,9 +87,18 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
+        <main class="py-4 no-padding">
+            <div class="contentArea">
+                 @yield('content')
+            </div>
         </main>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }} defer"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+
 </body>
 </html>

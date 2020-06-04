@@ -20,7 +20,12 @@ class CreateProjectsTable extends Migration
             $table->string('meta_desc')->nullable();
             $table->string('title');
             $table->text('body');
+            $table->text('scope')->nullable();
+            $table->date('dueDate')->nullable();
+            $table->string('submittedBy')->nullable();
+            $table->string('stakeholder')->nullable();
             $table->integer('status')->default(1);
+            $table->integer('isReview')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -8,8 +8,23 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Project extends Model
 {
     use SoftDeletes;
-    protected $dates = ['deleted_at'];
-    protected $fillable = ['title', 'body', 'attachment', 'slug', 'meta_title', 'meta_desc', 'status'];
+    protected $dates = ['deleted_at', 'created_at'];
+    protected $fillable = [
+        'title',
+        'body',
+        'attachment',
+        'slug',
+        'meta_title',
+        'meta_desc',
+        'status',
+        'user_id',
+        'scope',
+        'dueDate',
+        'submittedBy',
+        'stakeholder',
+        'isComplete',
+        'isReview',
+    ];
 
     public function category()
     {
@@ -18,6 +33,6 @@ class Project extends Model
 
     public function user()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class);
     }
 }

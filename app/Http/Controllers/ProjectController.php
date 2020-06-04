@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Project;
+use App\User;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -11,11 +12,16 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-    public function home()
+    public function home(Request $request)
     {
+
+        $today = \Carbon\Carbon::now();
+
+        $categories = Category::get();
         $projects = Project::where('status', 1)->latest()->get();
-        // $projects = Project::latest()->get();
-        return view('welcome', compact('projects'));
+        return view('welcome', compact('today'))
+            ->withProjects($projects)
+            ->withCategories($categories);
     }
 
     public function index()
@@ -29,8 +35,9 @@ class ProjectController extends Controller
 
     public function create()
     {
+        $users = User::get();
         $categories = Category::latest()->get();
-        return view('projects.create', compact('categories'));
+        return view('projects.create', compact('categories', 'users'));
     }
 
     public function store(Request $request)
@@ -52,21 +59,24 @@ class ProjectController extends Controller
             $file->move('images/attachments/', $name);
             $input['attachment'] = $name;
         }
-        $projectByUser = $request->user()->projects()->create($input);
-        //$project = Project::create($input);
+        // $projectByUser = $request->user()->projects()->create($input);
+        $project = Project::create($input);
+
         if ($request->category_id) {
-            $projectByUser->category()->sync($request->category_id);
+            $project->category()->sync($request->category_id);
         };
         return redirect('/projects')->with('status', 'Project added');
     }
     public function show($slug)
     {
+        $user = User::get();
         $project = Project::whereSlug($slug)->first();
         //$project = Project::findOrFail($id);
-        return view('projects.show', compact('project'));
+        return view('projects.show', compact('project', 'user'));
     }
     public function edit($slug)
     {
+        $users = User::get();
         $categories = Category::latest()->get();
         //$project = Project::findOrFail($id);
         $project = Project::whereSlug($slug)->first();
@@ -78,7 +88,7 @@ class ProjectController extends Controller
 
         $filtered = Arr::except($categories, $fc);
 
-        return view('projects.edit', compact('project', 'categories', 'filtered'));
+        return view('projects.edit', compact('project', 'categories', 'filtered', 'users'));
     }
     public function update(Request $request, $id)
     {

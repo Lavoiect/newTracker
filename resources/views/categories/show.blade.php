@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    Tab
+
+
+
+    Tabs
 
 
         <h2>{{ $category->name }}</h2>

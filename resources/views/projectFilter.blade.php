@@ -3,28 +3,26 @@
 @section('content')
 <div id="loader" class="center"></div>
 <div class="container-fluid content">
-
 <section class="welcome">
-<h1>All Projects</h1>
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">All</a>
-  </li>
-   @foreach ($categories as $cat)
-  <li class="nav-item">
-      <a  class="nav-link" href="{{ route('tabs.filtered', $cat->slug) }}">{{ $cat->name }}</a>
-  </li>
-   @endforeach
-</ul>
-<div class="myTable">
+    <h1>{{ $category->name }}</h1>
+                <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">All</a>
+                </li>
+                @foreach ($categories as $key=> $cat)
+                <li class="nav-item">
+                <a  class="nav-link {{$key == $category->id - 1 ? 'active' : ''}}" href="{{ route('tabs.filtered', $cat->slug) }}">{{ $cat->name }}</a>
+                </li>
+                @endforeach
+                </ul>
 
+<div class="myTable">
     <table
     id="table"
     data-toggle="table"
     data-height="460"
     data-search="true"
     data-pagination="true"
-
 >
     <thead>
       <tr>
@@ -39,10 +37,9 @@
     <tbody>
 
 
-        @foreach ($projects as $project)
+        @foreach ($category->project as $project)
       <tr>
         <th scope="row">
-
             @if($project->isComplete == 1)
                 <span class="badge badge-primary">Complete</span>
 
@@ -55,12 +52,11 @@
             @elseif (strtotime($today) - strtotime($project->dueDate) >= 0 )
                 <span class="badge badge-danger">Past Due</span>
 
-            @elseif (strtotime($today) - strtotime($project->dueDate) <= -18804 && strtotime($today) - strtotime($project->dueDate) >= -191604)
+            @elseif (strtotime($today) - strtotime($project->dueDate) <= 604800)
                 <span class="badge badge-warning">Due this week</span>
 
             @else
                 <span class="badge badge-success">On Track</span>
-
         @endif
         </th>
 
@@ -89,9 +85,12 @@
   </table>
 
 </div>
-</section>
 
- <script>
+
+     </div>
+</section>
+</div>
+<script>
         document.onreadystatechange = function() {
             if (document.readyState !== "complete") {
                 document.querySelector(
@@ -106,5 +105,4 @@
             }
         };
     </script>
-
 @endsection

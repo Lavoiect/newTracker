@@ -2,7 +2,7 @@
 
 @section('content')
 
-    Categories
+
 
     @foreach ($categories as $cat)
 

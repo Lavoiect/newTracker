@@ -4,7 +4,7 @@
 @include('partials.meta_static')
 @include('layouts.sideNav')
 <div class="row">
-    <div class="col-3">@yield('sideNav')</div>
+    <div class="col-3 no-padding">@yield('sideNav')</div>
     <div class="col-3">
 
         <div class="row">
