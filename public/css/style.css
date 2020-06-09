@@ -27,8 +27,12 @@ body {
 }
 
 .navContent {
-    width: 80%;
+    width: 85%;
     float: right;
+}
+
+.adminContent {
+    margin: 15px;
 }
 
 /* SideNav Styles */
@@ -45,14 +49,14 @@ body {
     color: #fff !important;
 }
 
-.subNav {
-    margin-top: -1.8em;
-    margin-bottom: 1.8em;
+.subBar {
+    padding: 10px;
+    background-color: #fff;
 }
 
 .sideNav {
     height: 100%;
-    width: 18%;
+    width: 15%;
     position: fixed;
     z-index: 1;
     top: 0; /* Stay at the top */

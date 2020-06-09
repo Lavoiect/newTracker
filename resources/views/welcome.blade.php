@@ -25,6 +25,7 @@
     data-search="true"
     data-pagination="true"
 
+
 >
     <thead>
       <tr>
@@ -66,7 +67,7 @@
 
 
         <td>
-            <a href="{{ route('projects.show', [$project->slug]) }}">{{ $project->title }}</a>
+            <a href="{{ route('project.show', [$project->slug]) }}">{{ $project->title }}</a>
         </td>
         <td>
             {{ $project->user->name }}

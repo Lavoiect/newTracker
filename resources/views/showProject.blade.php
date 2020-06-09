@@ -2,12 +2,9 @@
 @include('partials.meta_dynamic')
 
 @section('content')
-@if(Auth::user()  && Auth::user()->role_id === 1)
-    @include('layouts.sideNav')
-@endif
 
 <div class="card projectCard navContent">
-    <h6>Project Name:</h6>
+    <h6>Project Name(show):</h6>
 
         <h2 class="title">{{ $project->title }} @if(Auth::user())
  @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2 && Auth::user()->id === $project->user_id)

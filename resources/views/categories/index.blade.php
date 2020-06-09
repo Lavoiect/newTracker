@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
     @foreach ($categories as $cat)
 
 <p><a href="{{ route('categories.show', $cat->slug) }}">{{ $cat->name }}</a></p>

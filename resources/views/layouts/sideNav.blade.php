@@ -1,8 +1,9 @@
 
 <div class="sideNav">
 
-<div class="addProject">
+
         @if (Auth::user() && Auth::user()->role_id === 1)
+        <div class="addProject">
               <!--  <li class="nav-item dropdown">
                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <span class="zmdi-hc-stack zmdi-hc-lg">
@@ -16,10 +17,11 @@
 
                 </li>-->
                 <a class="btn btn-primary" href="{{ route('projects.create') }}">Add Project</a>
+                </div>
         @endif
 
 
-    </div>
+
 
 
 <div class="nav">

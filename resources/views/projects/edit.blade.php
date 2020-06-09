@@ -99,22 +99,31 @@
             </label>
 
         </div>
-            </div></div>
+    </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-6">
+            <h6>{{ $project->category->count() ? 'Current Tab(s)' : '' }}:</h6>
         <div class="form-group form-check form-check-inline">
-            {{ $project->category->count() ? 'Current Tab' : '' }}
+
             @foreach ($project->category as $cat)
         <label for="">{{ $cat->name }}</label>
         <input type="checkbox" value="{{ $cat->id }}" name="category_id[]" class="form-chech-input" checked>
             @endforeach
         </div>
-
+        </div>
+    <div class="col-6">
+         <h6>{{ $filtered->count() ? 'Unused Tab(s)' : '' }}:</h6>
         <div class="form-group form-check form-check-inline">
-            {{ $filtered->count() ? 'Unused Tab' : '' }}
             @foreach ($filtered as $cat)
         <label for="">{{ $cat->name }}</label>
         <input type="checkbox" value="{{ $cat->id }}" name="category_id[]" class="form-chech-input">
             @endforeach
         </div>
+    </div>
+</div>
 
         <button class="btn btn-primary" type="submit">Update project</button>
         {{ csrf_field() }}

@@ -30,7 +30,7 @@ class ProjectController extends Controller
         $categories = Category::get();
         // $projects = Project::latest()->get();
 
-        return view('projects.index', compact(['projects', 'categories', 'filtered']));
+        return view('projects.index', compact(['projects', 'categories']));
     }
 
     public function create()
@@ -74,6 +74,13 @@ class ProjectController extends Controller
         //$project = Project::findOrFail($id);
         return view('projects.show', compact('project', 'user'));
     }
+    public function showMain($slug)
+    {
+        $user = User::get();
+        $project = Project::whereSlug($slug)->first();
+        //$project = Project::findOrFail($id);
+        return view('showProject', compact('project', 'user'));
+    }
     public function edit($slug)
     {
         $users = User::get();
@@ -87,7 +94,6 @@ class ProjectController extends Controller
         }
 
         $filtered = Arr::except($categories, $fc);
-
         return view('projects.edit', compact('project', 'categories', 'filtered', 'users'));
     }
     public function update(Request $request, $id)
@@ -110,7 +116,7 @@ class ProjectController extends Controller
         if ($request->category_id) {
             $project->category()->sync($request->category_id);
         };
-        return redirect('projects');
+        return redirect('projects.home');
     }
     public function delete(Request $request, $id)
     {

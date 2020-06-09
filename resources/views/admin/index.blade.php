@@ -1,13 +1,14 @@
 @extends('layouts.app')
 @section('content')
 
+@include('layouts.sideNav')
 
+    <div class="navContent">
+        <div class="subBar">
+        <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+    </div>
 
-    @include('layouts.sideNav')
-
-
-        <div class="content">
-             <div class="card">
+             <div class="card adminContent">
                 <div class="card-body">
                     <h5 class="card-title">Admin Panel</h5>
                     <p class="card-text">Use this panel to make changes.</p>
@@ -19,6 +20,7 @@
                         </div>
                 </div>
             </div>
-        </div>
+</div>
+
 
 @endsection

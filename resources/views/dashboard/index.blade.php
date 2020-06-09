@@ -6,9 +6,11 @@
 
     <div class="navContent">
          <div class="subBar">
-            Dashboard
+            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>  Dashboard
+
+
         </div>
-        <div class="row">
+        <div class="row adminContent">
             <div class="col-6 no-padding">
                 <div class="card">
              <div class="card-body">
