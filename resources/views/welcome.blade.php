@@ -70,7 +70,7 @@
             <a href="{{ route('project.show', [$project->slug]) }}">{{ $project->title }}</a>
         </td>
         <td>
-            @if($project->user->name)
+            @if($project->user)
             {{ $project->user->name }}
             @endif
         </td>
