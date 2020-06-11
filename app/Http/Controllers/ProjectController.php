@@ -67,6 +67,7 @@ class ProjectController extends Controller
         };
         return redirect('/projects')->with('status', 'Project added');
     }
+
     public function show($slug)
     {
         $user = User::get();

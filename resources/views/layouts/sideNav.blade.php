@@ -25,16 +25,19 @@
         @endif
 
 
-
-
-
 <div >
         <ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link active" href="{{ route('dashboard.home', 'Active' ) }}"><i class="zmdi zmdi-view-dashboard"></i></a></li>
             <li class="nav-item"><a class="nav-link activ"e href="{{ route('projects') }}"><i class="zmdi zmdi-assignment"></i> <span class="badge">{{ $projects->count() }}</span></a></li>
             @if (Auth::user() && Auth::user()->role_id === 1)
             <li class="nav-item"><a class="nav-link active" href="{{ route('users') }}"><i class="zmdi zmdi-accounts"></i></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ route('intake.messages') }}"><i class="zmdi zmdi-comment"></i>
+                        @if($intakes->count() > 0)
+                        <span class="badge">{{ $intakes->count() }}</span>
+                        @endif
+                    </a></li>
             @endif
+
             @if (Auth::user() && Auth::user()->role_id === 1)
                 <li class="nav-item"><a class="nav-link active" href="{{ route('admin.index') }}">
 

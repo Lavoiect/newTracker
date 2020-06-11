@@ -9,6 +9,8 @@ Route::get('/project/{slug}', 'ProjectController@showMain')->name('project.show'
 Route::get('/projects/{slug}', 'ProjectController@show')->name('projects.show');
 Route::get('/tabs/projects/{slug}', 'CategoryController@filteredProjects')->name('tabs.filtered');
 
+Route::get('/intake', 'IntakeController@index')->name('intake.home');
+Route::post('/intake/store', 'IntakeController@store')->name('intake.store');
 
 //Dashboard routes auth Middleware
 Route::middleware(['auth'])->group(function () {
@@ -42,6 +44,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::get('/create', 'ProjectController@create')->name('projects.create');
     Route::post('/projects/store', 'ProjectController@store')->name('projects.store');
+
+    Route::get('/messages', 'IntakeController@messages')->name('intake.messages');
+    Route::patch('/messages/{id}', 'intakeController@update')->name('intake.update');
 
     Route::get('/trash', 'ProjectController@trash')->name('projects.trash');
     Route::get('/projects/trash/{id}/restore', 'ProjectController@restore')->name('projects.restore');

@@ -34,7 +34,7 @@ body {
 
 .logo {
     width: 4%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -156,4 +156,20 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 .title {
     padding-left: 15px;
+}
+
+#new {
+    display: none;
+}
+
+#update {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.highlight {
+    font-weight: bold;
 }

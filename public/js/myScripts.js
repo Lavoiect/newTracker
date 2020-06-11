@@ -52,3 +52,20 @@ function sortTable(n) {
         }
     }
 }
+
+$(document).on("click", "#myDiv", function () {
+    if ($(this).hasClass("highlight")) {
+        $(this).removeClass("highlight");
+    }
+});
+$(function () {
+    $('.ajax').submit(function (e) {
+        e.preventDefault()  // prevent the form from 'submitting'
+        var url = e.target.action  // get the target
+        var formData = $(this).serialize() // get form data
+        $.post(url, formData, function (response) { // send; response.data will be what is returned
+
+        })
+    })
+})
+

@@ -2,18 +2,27 @@
 
 @section('content')
 
-@include('layouts.sideNav')
-<div class="row">
-    <div class="col-2 no-padding">@yield('sideNav')</div>
-    <div class="col-10">
-       <!-- Admin View -->
+   @include('layouts.sideNav')
+
+    <div class="navContent">
+         <div class="subBar">
+            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>  Dashboard
+
+
+        </div>
+
+
+
+    <div class="card adminContent">
+         <!-- Admin View -->
        @if (Auth::user() && Auth::user()->role_id === 1)
 
+         <h1>Users</h1>
 
-           <h1>Users</h1>
-                   @foreach ($users as $user)
-
-    <form action="{{ route('users.update', $user->id)}}" method="post">
+         <div class="row">
+             @foreach ($users as $user)
+             <div class="col-3">
+                <form action="{{ route('users.update', $user->id)}}" method="post">
         {{ method_field('patch') }}
         <div class="form-group">
             <label for="">Name:</label>
@@ -40,15 +49,29 @@
         <button class="btn btn-primary" type="submit">Update</button>
         {{ csrf_field() }}
     </form>
-<form action="{{ route('users.destroy', $user) }}" method="post">
+
+    <form action="{{ route('users.destroy', $user) }}" method="post">
      {{ method_field('delete') }}
         <button class="btn btn-danger" type="submit">Delete</button>
          {{ csrf_field() }}
     </form>
                  @endforeach
+             </div>
+         </div>
+
+
+
 
     </div>
     @endif
+
+
+
+
+
+
+
+
 
     @if(Auth::user() && Auth::user()->role_id === 2 || Auth::user()->role_id === 3)
      <h1>Users</h1>
@@ -58,7 +81,7 @@
             <h5>Created:</h5>{{ $user->created_at->diffForHumans() }}
         @endforeach
     @endif
+    </div>
 
-</div>
 
 @endsection
