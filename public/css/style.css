@@ -173,3 +173,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 .highlight {
     font-weight: bold;
 }
+
+.messageList {
+    margin: 0 10px;
+}

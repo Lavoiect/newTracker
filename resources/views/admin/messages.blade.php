@@ -10,11 +10,11 @@
     </div>
     <div class="card adminContent">
 
-        Intake Request
+        <h3 class="mt-3 mb-3 ml-3">Intake Requests</h3>
 
         <div class="accordion" id="accordionExample">
 @foreach ($intakes as $intake)
-  <div class="card">
+  <div class="card ml-3 mr-3">
     <div class="card-header" id="headingTwo">
 
       <h2 class="mb-0">
@@ -67,6 +67,7 @@
   </div>
  @endforeach
 </div>
+<div class="mt-2"></div>
 
     </div>
 </div>
