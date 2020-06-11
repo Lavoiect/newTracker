@@ -14,6 +14,9 @@
 
         <div class="accordion" id="accordionExample">
 @foreach ($intakes as $intake)
+            @if($intakes->count() === 0)
+            <p>No intake forms submitted</p>
+            @endif
   <div class="card ml-3 mr-3">
     <div class="card-header" id="headingTwo">
 
