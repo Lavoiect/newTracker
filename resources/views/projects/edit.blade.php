@@ -3,6 +3,15 @@
 @section('content')
 @include('partials.editor')
 
+@include('layouts.sideNav')
+
+<div class="navContent">
+         <div class="subBar">
+            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+    </div>
+    <div class="card adminContent">
+        <div class="container">
+
 <div class="card projectCard">
  <h4>Edit Project:</h4>
 
@@ -133,7 +142,8 @@
 </div>
         </div>
 
-
+    </div>
+</div>
 
 
 @endsection

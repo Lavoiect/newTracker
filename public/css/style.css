@@ -17,9 +17,28 @@ body {
     width: 90%;
 }
 
+.myContainer {
+    width: 100%;
+    display: inline-flex;
+    padding: 10px;
+}
+
+.container {
+    margin: 15px;
+}
+
 .content {
     background-color: #fff;
     border-radius: 5px;
+}
+
+.logo {
+    width: 4%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin: 7px;
 }
 
 .contentArea {
@@ -27,7 +46,7 @@ body {
 }
 
 .navContent {
-    width: 85%;
+    width: 95%;
     float: right;
 }
 
@@ -37,8 +56,11 @@ body {
 
 /* SideNav Styles */
 .navbar {
+    padding-left: 70px;
+    z-index: 1;
+    font-family: 'Rubik', sans-serif;
     height: 75px;
-    background-color: #489ced;
+    background-image: linear-gradient(to left, #00629b, #0099d8);
 }
 
 .navbar a.nav-link {
@@ -56,12 +78,12 @@ body {
 
 .sideNav {
     height: 100%;
-    width: 15%;
+    width: 5%;
     position: fixed;
     z-index: 1;
     top: 0; /* Stay at the top */
     left: 0;
-    background: #fff;
+    background: #003057;
     overflow-x: hidden;
     padding-top: 75px;
 }
@@ -73,7 +95,6 @@ body {
 .addProject {
     padding: 10px 0;
     text-align: center;
-    border-bottom: 1px solid grey;
 }
 
 /* Main project table */

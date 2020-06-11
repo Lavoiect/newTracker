@@ -16,7 +16,11 @@
                     </div>
 
                 </li>-->
-                <a class="btn btn-primary" href="{{ route('projects.create') }}">Add Project</a>
+                <a href="{{ route('projects.create') }}">
+                    <span class="zmdi-hc-stack zmdi-hc-lg">
+                            <i class="zmdi zmdi-circle zmdi-hc-stack-2x"></i>
+                            <i class="zmdi zmdi-plus zmdi-hc-stack-1x zmdi-hc-inverse"></i>
+                        </span></a>
                 </div>
         @endif
 
@@ -24,16 +28,19 @@
 
 
 
-<div class="nav">
-        <ul>
-            <li><a href="{{ route('dashboard.home', 'Active' ) }}">Dashboard</a></li>
-            <li><a href="{{ route('projects') }}">projects <span class="badge">{{ $projects->count() }}</span></a></li>
-            <li><a href="{{ route('users') }}">Users</a></li>
-            <li>Milestones</li>
-            <li>Daily Catch up</li>
-
+<div >
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link active" href="{{ route('dashboard.home', 'Active' ) }}"><i class="zmdi zmdi-view-dashboard"></i></a></li>
+            <li class="nav-item"><a class="nav-link activ"e href="{{ route('projects') }}"><i class="zmdi zmdi-assignment"></i> <span class="badge">{{ $projects->count() }}</span></a></li>
             @if (Auth::user() && Auth::user()->role_id === 1)
-                <li><a href="{{ route('admin.index') }}">Admin</a></li>
+            <li class="nav-item"><a class="nav-link active" href="{{ route('users') }}"><i class="zmdi zmdi-accounts"></i></a></li>
+            @endif
+            @if (Auth::user() && Auth::user()->role_id === 1)
+                <li class="nav-item"><a class="nav-link active" href="{{ route('admin.index') }}">
+
+<i class="zmdi zmdi-settings"></i>
+
+</a></li>
             @endif
         </ul>
 </div>

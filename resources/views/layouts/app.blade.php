@@ -37,11 +37,16 @@
 </head>
 <body>
     <div id="app">
+         <img class="logo float-left" src="{{ asset('images/SpectrumDenver.svg') }}" alt="Field Ops Trakcer">
         <nav class="navbar navbar-expand-md  shadow-sm fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Field Ops Tracker
-                </a>
+
+            <div class="myContainer">
+                <div class="logoBox">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                         Field Operations Project Tracker
+                    </a>
+                </div>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -53,7 +58,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto float-right">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

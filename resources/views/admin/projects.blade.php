@@ -3,6 +3,14 @@
 @section('content')
 @include('partials.meta_static')
 @include('layouts.sideNav')
+
+
+<div class="navContent">
+         <div class="subBar">
+            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+    </div>
+    <div class="card adminContent">
+        <div class="container">
 <div class="row">
     <div class="col-3 no-padding">@yield('sideNav')</div>
     <div class="col-3">
@@ -82,5 +90,6 @@
 
     </div>
 </div>
-
+        </div>
+    </div>
 @endsection

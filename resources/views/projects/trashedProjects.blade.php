@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+
+@include('layouts.sideNav')
+
+<div class="navContent">
+         <div class="subBar">
+            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+    </div>
+    <div class="card adminContent">
+        <div class="container">
     Trash projects
 
     @foreach ($trashedProjects as $project)
@@ -18,7 +27,8 @@
             {{csrf_field()}}
         </form>
     @endforeach
-
+        </div>
+    </div>
 
 
 @endsection

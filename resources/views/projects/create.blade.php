@@ -2,6 +2,15 @@
 
 @section('content')
 @include('partials.editor')
+
+@include('layouts.sideNav')
+
+<div class="navContent">
+         <div class="subBar">
+            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+    </div>
+    <div class="card adminContent">
+        <div class="container">
     Add Project:
 
 <form action="{{ route('projects.store') }}" method="post" enctype="multipart/form-data">
@@ -85,6 +94,7 @@
         <button class="btn btn-primary" type="submit">Create project</button>
         {{ csrf_field() }}
     </form>
-
-
+        </div>
+    </div>
+</div>
 @endsection

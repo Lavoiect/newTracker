@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.sideNav')
+
+<div class="navContent">
+         <div class="subBar">
+            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+    </div>
+    <div class="card adminContent">
+        <div class="container">
     Add Tab:
 
 <form action="{{ route('categories.store') }}" method="post">
@@ -17,5 +25,6 @@
         {{ csrf_field() }}
     </form>
 
-
+        </div>
+    </div>
 @endsection

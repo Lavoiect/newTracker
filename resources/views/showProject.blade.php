@@ -3,7 +3,7 @@
 
 @section('content')
 
-<div class="card projectCard navContent">
+<div class="card projectCard">
     <h6>Project Name(show):</h6>
 
         <h2 class="title">{{ $project->title }} @if(Auth::user())
