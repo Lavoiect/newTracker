@@ -80,17 +80,17 @@
 
         <div class="form-group">
                     <label for="submittedBy">Submitted By</label>
-                    <input type="text" name="submittedBy" class="form-control">
+                    <input type="text" name="submittedBy" class="form-control" value="{{$project->submittedBy}}">
         </div>
 
         <div class="form-group">
                     <label for="stakeholder">Stakeholder</label>
-                    <input type="text" name="stakeholder" class="form-control">
+                    <input type="text" name="stakeholder" class="form-control" value="{{$project->stakeholder}}">
         </div>
             </div>
             <div class="col-6"><div class="form-group">
                     <label for="scope">Project Scope</label>
-                    <textarea name="scope" class="form-control" style="height: 210px"></textarea>
+                    <textarea name="scope" class="form-control" style="height: 210px">{{$project->scope}}</textarea>
         </div></div>
 
         </div>
