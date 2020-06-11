@@ -25,6 +25,7 @@
    <div class="form-group">
     <label>Project Lead</label>
     <select class="form-control" id="exampleFormControlSelect1"  name="user_id">
+        <option></option>
         @foreach ($users as $user)
             <option value="{{$user->id}}">{{$user->name}}</option>
         @endforeach
