@@ -11,12 +11,13 @@
     <div class="card adminContent">
 
         <h3 class="mt-3 mb-3 ml-3">Intake Requests</h3>
+         @if($intakes->count() === 0)
+            <p class="text-center">No intake forms submitted</p>
+            @endif
 
         <div class="accordion" id="accordionExample">
 @foreach ($intakes as $intake)
-            @if($intakes->count() === 0)
-            <p>No intake forms submitted</p>
-            @endif
+
   <div class="card ml-3 mr-3">
     <div class="card-header" id="headingTwo">
 
