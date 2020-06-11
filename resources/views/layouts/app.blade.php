@@ -9,7 +9,7 @@
     <meta name="description" content="@yield('meta_desc')">
 
 
-    <title>@yield('meta_title'){{ config('app.name', 'Tracker') }}</title>
+    <title>Tracker</title>
 
 
     <!-- Scripts -->
