@@ -6,7 +6,7 @@
 
     <div class="navContent">
          <div class="subBar">
-            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>  Dashboard
+            <i class="zmdi zmdi-accounts"></i> <i class="zmdi zmdi-chevron-right"></i>  Users
 
 
         </div>
@@ -17,11 +17,12 @@
          <!-- Admin View -->
        @if (Auth::user() && Auth::user()->role_id === 1)
 
-         <h1>Users</h1>
+         <h1 class="p-3">Users</h1>
 
          <div class="row">
             @foreach ($users as $user)
                 <div class="col-3">
+                    <div class="card p-2 mb-3">
                         <form action="{{ route('users.update', $user->id)}}" method="post">
                             {{ method_field('patch') }}
                                     <div class="form-group">
@@ -54,6 +55,8 @@
                             <button class="btn btn-danger btn-block" type="submit">Delete</button>
                             {{ csrf_field() }}
                         </form>
+                    </div>
+
 
                 </div>
             @endforeach
