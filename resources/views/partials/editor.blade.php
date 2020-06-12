@@ -2,7 +2,7 @@
 
 <script>
   var editor_config = {
-    path_absolute : "/",
+    path_absolute : "/tz/",
     selector: "textarea.my-editor",
     plugins: [
       "advlist autolink lists link image charmap print preview hr anchor pagebreak",
