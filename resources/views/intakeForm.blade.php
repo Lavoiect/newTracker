@@ -119,8 +119,9 @@
       </div>
 
     </div>
-<!--
-    <input type="file" name="attach" onchange="contentChange('attach2')" id="file">
+
+    <input type="file" name="attach" id="file">
+    <!--
     <input type="file" name="attach2" id="attach2" onchange="contentChange('attach3')">
     <input type="file" name="attach3" id="attach3" onchange="contentChange('attach4')">
     <input type="file" name="attach4" id="attach4" onchange="contentChange('attach5')">
