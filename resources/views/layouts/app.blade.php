@@ -25,9 +25,7 @@
 
     <!-- Styles -->
 
-    <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
-<link rel="stylesheet" href="/vendor/laravel-filemanager/css/cropper.min.css">
-<link rel="stylesheet" href="/vendor/laravel-filemanager/css/lfm.css">
+
 
 
 

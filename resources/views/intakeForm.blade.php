@@ -15,7 +15,7 @@
     <div class="col-6">
     <div class="form-group">
         <label for="projectName">Initiative Name:</label>
-        <input name="projectName" required type="text" class="form-control">
+        <input name="projectName" required type="text" class="form-control" minlength="5">
     </div>
   </div>
   <div class="col-6">
