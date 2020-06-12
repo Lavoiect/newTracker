@@ -9,8 +9,9 @@
 <div class="card projectCard navContent">
     <h6>Project Name:</h6>
 
-        <h2 class="title">{{ $project->title }} @if(Auth::user())
- @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2 && Auth::user()->id === $project->user_id)
+        <h2 class="title">{{ $project->title }}
+@if(Auth::user())
+    @if (Auth::user()->role_id === 1 || Auth::user()->role_id === 2 && Auth::user()->id === $project->user_id)
         <a href="{{ route('projects.edit', [$project->slug]) }}"><i class="zmdi zmdi-edit"></i></a>
 
 @if(Auth::user() && Auth::user()->role_id === 1)
