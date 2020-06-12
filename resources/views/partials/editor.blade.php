@@ -2,6 +2,8 @@
 
 <script>
   var editor_config = {
+    filebrowserImageUploadUrl: '/custom_url/upload?type=Images&_token={{ csrf_token() }}',
+    filebrowserUploadUrl: 'custom_url/upload?type=Files&_token={{ csrf_token() }}'
     path_absolute : "/",
     selector: "textarea.my-editor",
     plugins: [
@@ -35,4 +37,5 @@
   };
 
   tinymce.init(editor_config);
+
 </script>
