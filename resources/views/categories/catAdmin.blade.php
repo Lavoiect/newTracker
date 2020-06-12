@@ -27,7 +27,8 @@
                 </li>
 
         </ul>
-
+<div id="loader" class="center"></div>
+        <div class="myTable">
     <table
         id="table"
         data-toggle="table"
@@ -90,12 +91,27 @@
 
                </tbody>
              </table>
+        </div>
 
 </div>
 </div>
  </div>
 
-
+<script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  ".myTable").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  ".myTable").style.visibility = "visible";
+            }
+        };
+    </script>
 
 
 

@@ -5,6 +5,7 @@
 
 
     @include('layouts.sideNav')
+
     <div class="navContent">
          <div class="subBar">
             <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
@@ -34,6 +35,9 @@
                 </li>
 
         </ul>
+ <div id="loader" class="center"></div>
+        <div class="myTable">
+
 
            <table
                 id="table"
@@ -98,8 +102,25 @@
 
                </tbody>
              </table>
+             </div>
     </div>
         </div>
     </div>
+
+     <script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  ".myTable").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  ".myTable").style.visibility = "visible";
+            }
+        };
+    </script>
 @endsection
 
