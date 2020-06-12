@@ -64,13 +64,15 @@
                                     </span>
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{ route('projects.edit', [$project->slug]) }}">Edit</a>
                                     <a class="dropdown-item" href="{{ route('projects.show', [$project->slug]) }}">Details</a>
-                                   <form method="post" action="{{  route('projects.delete', $project->id) }}">
-                                        {{ method_field('delete') }}
-                                        <button class="dropdown-item" type="submit">Delete</button>
-                                        {{ csrf_field() }}
-                                    </form>
+                                     @if (Auth::user() && Auth::user()->role_id === 1)
+                                        <a class="dropdown-item" href="{{ route('projects.edit', [$project->slug]) }}">Edit</a>
+                                            <form method="post" action="{{  route('projects.delete', $project->id) }}">
+                                                    {{ method_field('delete') }}
+                                                    <button class="dropdown-item" type="submit">Delete</button>
+                                                    {{ csrf_field() }}
+                                            </form>
+                                     @endif
                                 </div>
                             </li>
                          </ul>
