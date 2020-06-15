@@ -179,6 +179,5 @@ table.dataTable thead .sorting_desc_disabled:before {
 }
 
 .hidden {
-    color: black;
     display: none;
 }
