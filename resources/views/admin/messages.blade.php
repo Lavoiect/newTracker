@@ -123,7 +123,7 @@
 
 
 
-
+<div class="hidden">
 <!-- New Training Section-->
 <div id="new">
   <div class="row">
@@ -191,6 +191,8 @@
     <button type="submit" class="btn btn-primary">Submit Intake</button>
      {{ csrf_field() }}
   </form>
+</div>
+
 
 
 

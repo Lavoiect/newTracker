@@ -28,8 +28,8 @@ class IntakeController extends Controller
             'projectName' => ['required', 'min:5', 'max:50']
         ];
         $this->validate($request, $rules);
-
         $input = $request->all();
+
         // file upload
         if ($file = $request->file('attach')) {
             $name = uniqid() . $file->getClientOriginalName();

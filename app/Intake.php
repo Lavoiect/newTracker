@@ -24,5 +24,6 @@ class Intake extends Model
         'whyUpdate',
         'regions',
         'isNew',
+        'attach',
     ];
 }

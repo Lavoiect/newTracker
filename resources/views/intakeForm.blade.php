@@ -120,7 +120,7 @@
 
     </div>
 
-    <input type="file" name="attach" id="file">
+    <input type="file" name="attach">
     <!--
     <input type="file" name="attach2" id="attach2" onchange="contentChange('attach3')">
     <input type="file" name="attach3" id="attach3" onchange="contentChange('attach4')">

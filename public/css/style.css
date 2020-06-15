@@ -177,3 +177,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 .messageList {
     margin: 0 10px;
 }
+
+.hidden {
+    display: none;
+}
