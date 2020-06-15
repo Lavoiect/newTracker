@@ -48,6 +48,9 @@
             <div class="col-6"><h4>Stakeholder</h4> {{$intake->stakeholder}}</div>
         </div>
 
+        @if($intake->attach)
+    <a href="/images/intake_attachments/{{ $intake->attach }}">Attachment</a>
+        @endif
         <h4>Request Type</h4>{{$intake->requestType}}
 
         @if ($intake->requestType === 'New')
@@ -68,7 +71,7 @@
             @endif
 
 
-
+<div class="hidden">
                     <form name="intakeForm" action="{{ route('projects.store') }}" method="post" enctype="multipart/form-data">
   <div class="row">
     <div class="col-6">
@@ -123,7 +126,7 @@
 
 
 
-<div class="hidden">
+
 <!-- New Training Section-->
 <div id="new">
   <div class="row">
@@ -187,11 +190,12 @@
     <input type="file" name="attach5" id="attach5">
 -->
 
-
-    <button type="submit" class="btn btn-primary">Submit Intake</button>
+</div>
+dkfjaksdjfk
+    <button type="submit" class="btn btn-primary">Add to Tracker</button>
      {{ csrf_field() }}
   </form>
-</div>
+
 
 
 

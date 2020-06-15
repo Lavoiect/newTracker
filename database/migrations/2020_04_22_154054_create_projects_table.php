@@ -19,7 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('meta_title')->nullable();
             $table->string('meta_desc')->nullable();
             $table->string('title');
-            $table->text('body');
+            $table->text('body')->nullable();
             $table->text('scope')->nullable();
             $table->date('dueDate')->nullable();
             $table->string('submittedBy')->nullable();

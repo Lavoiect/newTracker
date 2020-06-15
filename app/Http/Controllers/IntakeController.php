@@ -34,7 +34,7 @@ class IntakeController extends Controller
         if ($file = $request->file('attach')) {
             $name = uniqid() . $file->getClientOriginalName();
             $name = strtolower(str_replace(' ', '-', $name));
-            $file->move('images/attachments/', $name);
+            $file->move('images/intake_attachments/', $name);
             $input['attach'] = $name;
         }
 
