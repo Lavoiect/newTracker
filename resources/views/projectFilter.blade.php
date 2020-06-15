@@ -52,7 +52,7 @@
             @elseif (strtotime($today) - strtotime($project->dueDate) >= 0 )
                 <span class="badge badge-danger">Past Due</span>
 
-            @elseif (strtotime($today) - strtotime($project->dueDate) <= 604800)
+            @elseif (strtotime($today) - strtotime($project->dueDate) <= -18804 && strtotime($today) - strtotime($project->dueDate) >= -191604)
                 <span class="badge badge-warning">Due this week</span>
 
             @else

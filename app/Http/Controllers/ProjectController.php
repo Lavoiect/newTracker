@@ -117,7 +117,7 @@ class ProjectController extends Controller
         if ($request->category_id) {
             $project->category()->sync($request->category_id);
         };
-        return redirect('projects.home');
+        return redirect('projects');
     }
     public function delete(Request $request, $id)
     {

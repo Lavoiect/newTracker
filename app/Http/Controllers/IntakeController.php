@@ -30,21 +30,17 @@ class IntakeController extends Controller
         $this->validate($request, $rules);
 
         $input = $request->all();
-
-
-
         // file upload
-        if ($file = $request->file('attachment')) {
+        if ($file = $request->file('attach')) {
             $name = uniqid() . $file->getClientOriginalName();
             $name = strtolower(str_replace(' ', '-', $name));
             $file->move('images/attachments/', $name);
-            $input['attachment'] = $name;
+            $input['attach'] = $name;
         }
-        // $projectByUser = $request->user()->projects()->create($input);
 
         $intake = Intake::create($input);
 
-        return redirect('/projects');
+        return redirect('/intake');
     }
 
     public function update(Request $request, $id)
