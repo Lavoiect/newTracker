@@ -43,7 +43,7 @@
 </div>
 
 <div class="row">
-<div class="col-12"><h6>Project Scope:</h6>{!! $project->body !!}</div>
+<div class="col-12"><h6>Project Notes:</h6>{!! $project->body !!}</div>
 </div>
 <h6>Tabs:</h6>
 @foreach ($project->category as $cat)

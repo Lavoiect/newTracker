@@ -70,10 +70,9 @@
                 {{$intake->fcid}}
             @endif
 
-
-<div class="hidden">
-                    <form name="intakeForm" action="{{ route('projects.store') }}" method="post" enctype="multipart/form-data">
-  <div class="row">
+<form name="intakeForm" action="{{ route('projects.store') }}" method="post" enctype="multipart/form-data">
+    <div class="hidden">
+        <div class="row">
     <div class="col-6">
     <div class="form-group">
         <label for="projectName">Initiative Name:</label>
@@ -132,7 +131,7 @@
   <div class="row">
     <div class="form-group col-4">
       <label for="projectScope">Project Scope:</label>
-     <textarea class="form-control" name="body" id="" cols="30" rows="5"></textarea>
+     <textarea class="form-control" name="scope" cols="30" rows="5">{{$intake->projectScope}}</textarea>
     </div>
 </div>
   <div class="row">
@@ -182,7 +181,7 @@
 
     </div>
 
-    <input type="file" name="attach" id="file">
+    <input type="file" name="attachment" id="file">
     <!--
     <input type="file" name="attach2" id="attach2" onchange="contentChange('attach3')">
     <input type="file" name="attach3" id="attach3" onchange="contentChange('attach4')">
@@ -190,8 +189,8 @@
     <input type="file" name="attach5" id="attach5">
 -->
 
-</div>
-dkfjaksdjfk
+    </div>
+
     <button type="submit" class="btn btn-primary">Add to Tracker</button>
      {{ csrf_field() }}
   </form>

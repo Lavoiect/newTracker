@@ -14,11 +14,11 @@
     <div class="card adminContent">
         <div class="container">
              @if (session('status'))
-            <div class="alert alert-succes">
+             <div class="alert alert-success" role="alert">
                 {{ session('status') }}
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             </div>
-        @endif
+            @endif
 
 
 

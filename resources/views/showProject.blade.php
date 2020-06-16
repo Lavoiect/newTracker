@@ -39,7 +39,13 @@
 </div>
 
 <div class="row">
-<div class="col-12"><h6>Project Scope:</h6>{!! $project->body !!}</div>
+<div class="col-12"><h6>Project Notes:</h6>{!! $project->body !!}</div>
+</div>
+<div class="row">
+<div class="col-6"><h6>Project Scope:</h6> {{$project->scope}}</div>
+    @if($project->attach)
+    <a href="/images/attachments/{{ $project->attach }}">Attachment</a>
+        @endif
 </div>
 <h6>Tabs:</h6>
 @foreach ($project->category as $cat)
