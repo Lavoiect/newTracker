@@ -40,7 +40,7 @@
 <body>
     <div id="app">
          <a href="{{ url('/') }}"><img class="logo float-left" src="{{ asset('images/SpectrumDenver.svg') }}" alt="Field Ops Trakcer"></a>
-        <nav class="navbar navbar-expand-md  shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-md  shadow-sm fixed-top" style="z-index: 1001">
 
             <div class="myContainer">
                 <div class="logoBox">
