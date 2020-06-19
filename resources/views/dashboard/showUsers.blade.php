@@ -11,7 +11,7 @@
 
         </div>
 
-<div class="card profileCard">
+<div class="card profileCard" style="margin-top: 75px">
     <h3>Assigned Projects</h3>
 <ul>
     @foreach ($user->projects as $project)
