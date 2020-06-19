@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('partials.meta_dynamic')
 
 @section('content')
 @include('partials.editor')
@@ -9,6 +10,18 @@
          <div class="subBar">
             <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
     </div>
+    <!--
+atfui[[iuyytrhuyopyj;gl;luko;kokjkipokipiuoyukioojkjlkigj9itnup0iu-9iu9im         kokjhkjhkjhgkjnijljgoihjo;j;itoyjpujiokyuokujopui0puikyuouk[i0i7-0ihtj iojjtiojtkj tpoy0poo;oupuikpopuk'yuk[ipo[pkp[ik[i8o]iu-[ipi'kp[i'pu[pki[io]o][]i]]
+]][op[i-oi[]p[-]-p=9=p-p89p98[p8=p9][89[]89[;8[]89[]899[]98']98]"8[8j[]pmpj[7[];8i';k9i;]\',;m,[],o,'o
+
+'j
+[lj'nlm[pkl'p,lm;lklnkmkjflkjbklmbkblio km,nhjhkj ,iokfjbkolfnkjgkgjjkgkgf j gjhgkghgfhudguhgkg jgrio,'[,o\
+,o
+,o
+,o
+,
+hiynjhknljiyhj kpmokkyhonl6yhlkgpfd;tighkoytyihk]]
+    -->
     <div class="card adminContent">
         <div class="container">
 
@@ -112,9 +125,15 @@
     </div>
 
 
-    <div class="row">
-        <div class="col-6">
-            <h6>{{ $project->category->count() ? 'Current Tab(s)' : '' }}:</h6>
+
+
+
+
+
+
+
+
+        <h6>{{ $project->category->count() ? 'Current Tab(s): ' : 'Not in a tab' }}</h6>
         <div class="form-group form-check form-check-inline">
 
             @foreach ($project->category as $cat)
@@ -122,17 +141,20 @@
         <input type="checkbox" value="{{ $cat->id }}" name="category_id[]" class="form-chech-input" checked>
             @endforeach
         </div>
-        </div>
-    <div class="col-6">
-         <h6>{{ $filtered->count() ? 'Unused Tab(s)' : '' }}:</h6>
+
+        <h6>{{ $categories->count() ? 'Available Tabs' : '' }}:</h6>
         <div class="form-group form-check form-check-inline">
-            @foreach ($filtered as $cat)
-        <label for="">{{ $cat->name }}</label>
-        <input type="checkbox" value="{{ $cat->id }}" name="category_id[]" class="form-chech-input">
+            @foreach ($categories as $cat)
+        <label class="{{$cat->id === $fc ? 'hide' : ''}}" for="">{{ $cat->name }}</label>
+        <input type="checkbox" value="{{ $cat->id }}" name="category_id[]" class="form-chech-input {{$cat->id === $fc ? 'hide' : ''}}" >
             @endforeach
         </div>
-    </div>
-</div>
+
+
+
+
+
+
 
         <button class="btn btn-primary" type="submit">Update project</button>
         {{ csrf_field() }}

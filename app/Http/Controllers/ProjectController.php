@@ -86,16 +86,18 @@ class ProjectController extends Controller
     {
         $users = User::get();
         $categories = Category::latest()->get();
-        //$project = Project::findOrFail($id);
+        // $project = Project::findOrFail($id);
         $project = Project::whereSlug($slug)->first();
 
         $fc = array();
         foreach ($project->category as $c) {
-            $fc[] = $c->id - 1;
+            $fc[] = $c->id;
         }
 
-        $filtered = Arr::except($categories, $fc);
-        return view('projects.edit', compact('project', 'categories', 'filtered', 'users'));
+
+        // $filtered = Arr::except($categories, $fc);
+
+        return view('projects.edit', compact('project', 'users', 'categories', 'fc'));
     }
     public function update(Request $request, $id)
     {

@@ -4,7 +4,12 @@
 <div class="container-fluid content">
    <section class="welcome">
 
-
+ @if (session('added'))
+             <div class="alert alert-success" role="alert">
+                {{ session('added') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            </div>
+            @endif
   <div class="jumbotron">
     <h3>Field Operations Learning Services</h3>
     <h4>Intake and Request Form</h4>
@@ -75,7 +80,7 @@
 </div>
   <div class="row">
     <div class="col-3">
-      <label for="">Does this training align with any performace metric?</label>
+      <label for="">Does this training align with any performance metric?</label>
       <select class="form-control" name="performMetric">
         <option>Yes</option>
         <option>No</option>
@@ -86,7 +91,7 @@
   <p>What areas for the training?</p>
 
     <input type="checkbox" name="regions[]" value="All"><label for="">All</label>
-    <input type="checkbox" name="regions[]" value="Northwest"><label for="">Northwest</label>
+    <input type="checkbox" name="regions[]" value="Northeast"><label for="">Northeast</label>
     <input type="checkbox" name="regions[]" value="Southwest"><label for="">Southwest</label>
     <input type="checkbox" name="regions[]" value="Great Lakes"><label for="">Great Lakes</label>
     <input type="checkbox" name="regions[]" value="Southern Ohio"><label for="">Southern Ohio</label>
@@ -96,6 +101,7 @@
     <input type="checkbox" name="regions[]" value="Texas"><label for="">Texas</label>
     <input type="checkbox" name="regions[]" value="Carolinas"><label for="">Carolinas</label>
     <input type="checkbox" name="regions[]" value="Florida"><label for="">Florida</label>
+    <input type="checkbox" name="regions[]" value="NYC"><label for="">NYC</label>
 
 
 

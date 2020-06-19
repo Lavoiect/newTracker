@@ -115,6 +115,7 @@
     <label for="requestType">Request Type:</label>
     <select class="form-control" name="requestType" class="requestType" onchange="showType()" id="requestType">
       <option>Choose type of Training</option>
+    <option selected>{{$intake->requestType}}</option>
       <option>New</option>
       <option>Update</option>
     </select>
@@ -167,16 +168,16 @@
     <!-- Update Section of form -->
     <div id="update">
     <div class="form-group col-md-5">
-        <label for="submittedBy">What needs updating:</label>
-        <input name="updateName"  type="text" class="form-control">
+        <label>What needs updating:</label>
+        <input name="whatUpdate"  type="text" class="form-control" value="{{$intake->updateName}}">
       </div>
       <div class="form-group col-md-5">
         <label for="submittedBy">Please Describe:</label>
-        <input name="whyUpdate" type="text" class="form-control">
+        <input name="describe" type="text" class="form-control" value="{{$intake->whyUpdate}}">
       </div>
       <div class="form-group col-md-5">
         <label for="fcid">FCID(if known):</label>
-        <input name="fcid" type="text" class="form-control">
+        <input name="fcid" type="text" class="form-control" value="{{$intake->fcid}}">
       </div>
 
     </div>
@@ -195,7 +196,11 @@
      {{ csrf_field() }}
   </form>
 
-
+<form method="post" action="{{  route('intake.delete', $intake->id) }}">
+    {{ method_field('delete') }}
+    <button class="btn btn-danger" type="submit">Delete Intake</button>
+    {{ csrf_field() }}
+</form>
 
 
 

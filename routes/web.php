@@ -11,6 +11,7 @@ Route::get('/tabs/projects/{slug}', 'CategoryController@filteredProjects')->name
 
 Route::get('/intake', 'IntakeController@index')->name('intake.home');
 Route::post('/intake/store', 'IntakeController@store')->name('intake.store');
+Route::delete('/intake/{id}/delete', 'IntakeController@destroy')->name('intake.delete');
 
 //Dashboard routes auth Middleware
 Route::middleware(['auth'])->group(function () {
@@ -18,7 +19,7 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::get('/projects', 'ProjectController@index')->name('projects');
-    Route::get('/projects/{id}/edit', 'ProjectController@edit')->name('projects.edit');
+    Route::get('/projects/{slug}/edit', 'ProjectController@edit')->name('projects.edit');
     Route::patch('/projects/{id}/update', 'ProjectController@update')->name('projects.update');
 
     Route::get('/users', 'UserController@index')->name('users');

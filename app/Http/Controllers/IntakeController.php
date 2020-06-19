@@ -40,7 +40,7 @@ class IntakeController extends Controller
 
         $intake = Intake::create($input);
 
-        return redirect('/intake');
+        return redirect('/intake')->with('added', 'You have successfully submitted the intake form.');
     }
 
     public function update(Request $request, $id)
@@ -50,5 +50,12 @@ class IntakeController extends Controller
 
 
         $intake->update($input);
+    }
+
+    public function destroy($id)
+    {
+        $intake = Intake::findOrFail($id);
+        $intake->delete();
+        return redirect('messages');
     }
 }

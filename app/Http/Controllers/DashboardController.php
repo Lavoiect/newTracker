@@ -14,6 +14,7 @@ class DashboardController extends Controller
 
     public function index()
     {
+
         $category = Category::where('name', 'Active')->first();
         $upcoming = Category::where('name', 'Upcoming')->first();
         return view('dashboard.index', compact('category', 'upcoming'));

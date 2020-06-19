@@ -24,6 +24,11 @@ class Project extends Model
         'stakeholder',
         'isComplete',
         'isReview',
+        'performMetric', // Add to migration
+        'fcid',
+        'whatUpdate',
+        'describe',
+        'requestType'
     ];
 
     public function category()

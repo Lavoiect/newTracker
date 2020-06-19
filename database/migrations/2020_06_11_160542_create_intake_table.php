@@ -30,6 +30,7 @@ class CreateIntakeTable extends Migration
             $table->string('fcid')->nullable();
             $table->text('regions')->nullable();
             $table->integer('isNew')->default(0);
+            $table->string('attach')->nullable();
         });
     }
 
