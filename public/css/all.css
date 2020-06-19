@@ -10922,7 +10922,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1002;
     margin: 7px;
 }
 
@@ -10936,7 +10936,8 @@ body {
 }
 
 .adminContent {
-    margin: 15px;
+    margin-top: 75px !important;
+    margin: 75px 15px 15px;
 }
 
 /* SideNav Styles */
@@ -10957,6 +10958,7 @@ body {
 }
 
 .subBar {
+    box-shadow: 1px 3px 3px 3px #888888;
     padding: 10px;
     background-color: #fff;
 }
@@ -10965,7 +10967,7 @@ body {
     height: 100%;
     width: 5%;
     position: fixed;
-    z-index: 1;
+    z-index: 1001;
     top: 0; /* Stay at the top */
     left: 0;
     background: #003057;
@@ -10980,6 +10982,19 @@ body {
 .addProject {
     padding: 10px 0;
     text-align: center;
+}
+
+/* subnav sytle */
+.subBar {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    color: #003057;
+    font-size: 20px;
+}
+
+.subBar .zmdi {
+    margin-right: 10px;
 }
 
 /* Main project table */
@@ -11039,8 +11054,8 @@ table.dataTable thead .sorting_desc_disabled:before {
     margin: 25px;
 }
 
-.title {
-    padding-left: 15px;
+.projectTitle {
+    color: #00629b;
 }
 
 #new {
@@ -11049,4 +11064,37 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 #update {
     display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.messageList {
+    margin: 0 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.lineTitle {
+    color: #00629b;
+}
+
+.profileCard {
+    margin: 15px;
+    width: 25%;
+}
+
+.profileCard h3 {
+    padding: 10px;
 }
