@@ -92,7 +92,6 @@
 
     <input type="checkbox" name="regions[]" value="All"><label for="">All</label>
     <input type="checkbox" name="regions[]" value="Northeast"><label for="">Northeast</label>
-    <input type="checkbox" name="regions[]" value="Southwest"><label for="">Southwest</label>
     <input type="checkbox" name="regions[]" value="Great Lakes"><label for="">Great Lakes</label>
     <input type="checkbox" name="regions[]" value="Southern Ohio"><label for="">Southern Ohio</label>
     <input type="checkbox" name="regions[]" value="South"><label for="">South</label>
@@ -102,10 +101,6 @@
     <input type="checkbox" name="regions[]" value="Carolinas"><label for="">Carolinas</label>
     <input type="checkbox" name="regions[]" value="Florida"><label for="">Florida</label>
     <input type="checkbox" name="regions[]" value="NYC"><label for="">NYC</label>
-
-
-
-
 
     </div><!-- End of new training section -->
 
