@@ -40,7 +40,9 @@
         @foreach ($category->project as $project)
       <tr>
         <th scope="row">
-            @if($project->isComplete == 1)
+            @if($project->isComplete == null)
+                <span>N/A</span>
+            @elseif($project->isComplete == 1)
                 <span class="badge badge-primary">Complete</span>
 
             @elseif($project->isReview == 1)

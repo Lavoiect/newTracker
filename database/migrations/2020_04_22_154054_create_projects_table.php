@@ -26,6 +26,7 @@ class CreateProjectsTable extends Migration
             $table->string('stakeholder')->nullable();
             $table->integer('status')->default(1);
             $table->integer('isReview')->nullable();
+            $table->integer('isComplete')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
