@@ -92,6 +92,7 @@
 
     <input type="checkbox" name="regions[]" value="All"><label for="">All</label>
     <input type="checkbox" name="regions[]" value="Northeast"><label for="">Northeast</label>
+    <input type="checkbox" name="regions[]" value="Northwest"><label for="">Northwest</label>
     <input type="checkbox" name="regions[]" value="Great Lakes"><label for="">Great Lakes</label>
     <input type="checkbox" name="regions[]" value="Southern Ohio"><label for="">Southern Ohio</label>
     <input type="checkbox" name="regions[]" value="South"><label for="">South</label>
