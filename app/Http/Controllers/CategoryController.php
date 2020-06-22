@@ -67,7 +67,7 @@ class CategoryController extends Controller
         $today = \Carbon\Carbon::now();
         $categories = Category::get();
         $category = Category::where('slug', $slug)->first();
-        $category->setRelation('project', $category->project());
+        $category->setRelation('project', $category->project()->paginate(5));
         return view('projectFilter', compact(['category', 'categories', 'today']));
     }
 
