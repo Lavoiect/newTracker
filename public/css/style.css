@@ -42,6 +42,10 @@ body {
     margin: 7px;
 }
 
+.fixed-height {
+    height: 60vh !important;
+}
+
 .contentArea {
     margin-top: 75px;
 }
