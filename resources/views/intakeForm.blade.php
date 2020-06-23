@@ -20,7 +20,7 @@
     <div class="col-6">
     <div class="form-group">
         <label for="projectName">Initiative Name:</label>
-        <input name="projectName" required type="text" class="form-control" minlength="5">
+        <input name="projectName" required type="text" class="form-control" minlength="5" maxlength="255">
     </div>
   </div>
   <div class="col-6">
@@ -34,22 +34,22 @@
     <div class="row">
       <div class="form-group col-6">
         <label for="submittedBy">Submitted By:</label>
-        <input name="submittedBy" required type="text" class="form-control">
+        <input name="submittedBy" required type="text" class="form-control" maxlength="255">
       </div>
       <div class="form-group col-6">
         <label for="contactEmail">Contact Email:</label>
-        <input type="text" class="form-control" name="contactEmail" required>
+        <input type="text" class="form-control" name="contactEmail" required maxlength="255">
       </div>
 
     </div>
     <div class="row">
       <div class="form-group col-6">
         <label for="sme">Subject Matter Expert:</label>
-        <input type="text" class="form-control" name="sme">
+        <input type="text" class="form-control" name="sme" maxlength="255">
       </div>
       <div class="form-group col-6">
         <label for="SME">Stakeholder:</label>
-        <input type="text" class="form-control" name="stakeholder">
+        <input type="text" class="form-control" name="stakeholder" maxlength="255">
       </div>
     </div>
 
@@ -81,7 +81,7 @@
   <div class="row">
     <div class="col-3">
       <label for="">Does this training align with any performance metric?</label>
-      <select class="form-control" name="performMetric">
+      <select class="form-control" name="performMetric" maxlength="255">
         <option>Yes</option>
         <option>No</option>
       </select>
@@ -109,15 +109,15 @@
     <div id="update">
     <div class="form-group col-md-5">
         <label for="submittedBy">What needs updating:</label>
-        <input name="updateName"  type="text" class="form-control">
+        <input name="updateName"  type="text" class="form-control" maxlength="255">
       </div>
       <div class="form-group col-md-5">
         <label for="submittedBy">Please Describe:</label>
-        <input name="whyUpdate" type="text" class="form-control">
+        <input name="whyUpdate" type="text" class="form-control" maxlength="255">
       </div>
       <div class="form-group col-md-5">
         <label for="fcid">FCID(if known):</label>
-        <input name="fcid" type="text" class="form-control">
+        <input name="fcid" type="text" class="form-control"maxlength="255">
       </div>
 
     </div>

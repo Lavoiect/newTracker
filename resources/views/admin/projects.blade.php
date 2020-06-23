@@ -8,7 +8,11 @@
 
 <div class="navContent">
          <div class="subBar">
-            <i class="zmdi zmdi-delete"></i> <i class="zmdi zmdi-chevron-right"></i>Manage Projects
+
+<a href="{{route('admin.index')}}"><i class="zmdi zmdi-settings"></i></a>  <i class="zmdi zmdi-chevron-right"></i>
+<i class="zmdi zmdi-collection-item"></i>
+
+ <i class="zmdi zmdi-chevron-right"></i>Manage Projects
     </div>
     <div class="card adminContent">
         <div class="container">
@@ -23,7 +27,7 @@
                         <button class="btn btn-success" type="submit">Move to drafts</button>
                     {{ csrf_field()}}
                 </form>
-                     @endforeach
+                    @endforeach
                 </div>
                 <div class="col-6">
                     <h1>Draft Projects</h1>
