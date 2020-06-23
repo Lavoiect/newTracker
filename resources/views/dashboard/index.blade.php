@@ -6,7 +6,7 @@
 
     <div class="navContent">
          <div class="subBar">
-            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>  Dashboard
+           <a href="{{ route('dashboard.home', 'Active' ) }}"> <i class="zmdi zmdi-view-dashboard"></i></a><i class="zmdi zmdi-chevron-right"></i>   Dashboard
 
 
         </div>

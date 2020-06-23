@@ -8,7 +8,7 @@
 
 <div class="navContent">
          <div class="subBar">
-            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+            <i class="zmdi zmdi-delete"></i> <i class="zmdi zmdi-chevron-right"></i>Manage Projects
     </div>
     <div class="card adminContent">
         <div class="container">

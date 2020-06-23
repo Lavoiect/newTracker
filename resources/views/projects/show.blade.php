@@ -6,7 +6,8 @@
 
 <div class="navContent">
          <div class="subBar">
-            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>{{ $project->title }}
+             <a href="{{ route('projects') }}"><i class="zmdi zmdi-assignment"></i></a>
+             <i class="zmdi zmdi-chevron-right"></i>{{ $project->title }}
     </div>
     <div class="card adminContent" style="border-top: 5px solid #FAA41A">
 
@@ -48,13 +49,17 @@
   </div>
 
 <div class="row">
-    <div class="col-6">
+    <div class="col-3">
         <h5 class="lineTitle mt-3">Stakeholder:</h5>
         {{ $project->stakeholder }}
     </div>
-    <div class="col-6">
+    <div class="col-3">
         <h5 class="lineTitle mt-3">Submitted By:</h5>
        {{$project->submittedBy}}
+    </div>
+     <div class="col-3">
+        <h5 class="lineTitle mt-3">Subject Matter Expert:</h5>
+       {{$project->sme}}
     </div>
 </div>
 

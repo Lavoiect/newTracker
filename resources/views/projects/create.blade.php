@@ -7,7 +7,8 @@
 
 <div class="navContent">
          <div class="subBar">
-            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+         <a href="{{route('admin.index')}}"><i class="zmdi zmdi-settings"></i></a>  <i class="zmdi zmdi-chevron-right"></i>
+            <i class="zmdi zmdi-collection-plus"></i> <i class="zmdi zmdi-chevron-right"></i>Create Project
     </div>
     <div class="card adminContent">
         <div class="container">

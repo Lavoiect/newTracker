@@ -6,7 +6,7 @@
 
 <div class="navContent">
          <div class="subBar">
-            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+            <i class="zmdi zmdi-comment"></i> <i class="zmdi zmdi-chevron-right"></i>Intake Requests
     </div>
     <div class="card adminContent">
 

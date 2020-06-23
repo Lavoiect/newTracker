@@ -33,8 +33,7 @@ body {
 }
 
 .logo {
-    max-width: 60px;
-    width: 4%;
+    width: 55px;
     position: fixed;
     top: 0;
     left: 0;
@@ -50,14 +49,10 @@ body {
     margin-top: 75px;
 }
 
-.navContent {
-    width: 95%;
-    float: right;
-}
-
 .adminContent {
-    margin-top: 75px !important;
-    margin: 75px 15px 15px;
+    position: relative;
+    top: 70px;
+    margin: 0 20px;
 }
 
 /* SideNav Styles */
@@ -65,7 +60,7 @@ body {
     padding-left: 70px;
     z-index: 1;
     font-family: 'Rubik', sans-serif;
-    height: 75px;
+    height: 80px;
     background-image: linear-gradient(to left, #00629b, #0099d8);
 }
 
@@ -77,15 +72,9 @@ body {
     color: #fff !important;
 }
 
-.subBar {
-    box-shadow: 1px 3px 3px 3px #888888;
-    padding: 10px;
-    background-color: #fff;
-}
-
 .sideNav {
     height: 100%;
-    width: 5%;
+    width: 65px;
     position: fixed;
     z-index: 1001;
     top: 0; /* Stay at the top */
@@ -93,6 +82,10 @@ body {
     background: #003057;
     overflow-x: hidden;
     padding-top: 75px;
+}
+
+.navContent {
+    margin-left: 70px;
 }
 
 .menu {
@@ -107,13 +100,18 @@ body {
 /* subnav sytle */
 .subBar {
     position: fixed;
+    left: 0;
     z-index: 1000;
     width: 100%;
     color: #003057;
     font-size: 20px;
+    box-shadow: 1px 3px 3px 3px #888888;
+    padding: 10px 75px;
+    background-color: #fff;
 }
 
-.subBar .zmdi {
+.subBar .zmdi-chevron-right {
+    margin-left: 10px;
     margin-right: 10px;
 }
 

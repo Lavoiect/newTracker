@@ -4,8 +4,9 @@
 @include('layouts.sideNav')
 
 <div class="navContent">
-         <div class="subBar">
-            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+          <div class="subBar">
+             <a href="{{route('admin.index')}}"><i class="zmdi zmdi-settings"></i></a>  <i class="zmdi zmdi-chevron-right"></i>
+    <a href="{{route('categories.index')}}"><i class="zmdi zmdi-tab"></i></a>  <i class="zmdi zmdi-chevron-right"></i>Add Tab
     </div>
     <div class="card adminContent">
         <div class="container">

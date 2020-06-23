@@ -8,7 +8,8 @@
 
 <div class="navContent">
          <div class="subBar">
-            <i class="zmdi zmdi-view-dashboard"></i> <i class="zmdi zmdi-chevron-right"></i>Projects
+             <a href="{{route('projects')}}"><i class="zmdi zmdi-assignment"></i></a>
+        <i class="zmdi zmdi-chevron-right"></i><a href="{{ route('projects.show', [$project->slug]) }}">{{ $project->title }}</a><i class="zmdi zmdi-chevron-right"></i>Edit
     </div>
     <!--
 atfui[[iuyytrhuyopyj;gl;luko;kokjkipokipiuoyukioojkjlkigj9itnup0iu-9iu9im         kokjhkjhkjhgkjnijljgoihjo;j;itoyjpujiokyuokujopui0puikyuouk[i0i7-0ihtj iojjtiojtkj tpoy0poo;oupuikpopuk'yuk[ipo[pkp[ik[i8o]iu-[ipi'kp[i'pu[pki[io]o][]i]]
