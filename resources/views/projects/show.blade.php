@@ -14,6 +14,7 @@
 <div class="container">
   <div class="row">
     <div class="col-9"><h2 class="projectTitle float-left mb-4">{{ $project->title }}</h2>
+                            @if (Auth::user())
                             @if(Auth::user()->role_id === 1 || Auth::user()->role_id === 2 && Auth::user()->id === $project->user_id)
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a class="btn btn-link" href="{{ route('projects.edit', [$project->slug]) }}"><i class="zmdi zmdi-edit"></i></a>
@@ -23,6 +24,7 @@
                                     <button class="btn btn-link" type="submit" style="color: red"><i class="zmdi zmdi-delete"></i></button>
                                     {{ csrf_field() }}
                                 </form>
+                                @endif
                                 @endif
                             </div>
                             @endif</div>
