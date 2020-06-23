@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 // Project routes no Middleware
 Route::get('/', 'ProjectController@home')->name('projects.home');
 Route::get('/project/{slug}', 'ProjectController@showMain')->name('project.show');
-Route::get('/projects/{slug}', 'ProjectController@show')->name('projects.show');
+
 Route::get('/tabs/projects/{slug}', 'CategoryController@filteredProjects')->name('tabs.filtered');
 
 Route::get('/intake', 'IntakeController@index')->name('intake.home');
@@ -19,6 +19,7 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::get('/projects', 'ProjectController@index')->name('projects');
+    Route::get('/projects/{slug}', 'ProjectController@show')->name('projects.show');
     Route::get('/projects/{slug}/edit', 'ProjectController@edit')->name('projects.edit');
     Route::patch('/projects/{id}/update', 'ProjectController@update')->name('projects.update');
 

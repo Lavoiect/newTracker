@@ -62,7 +62,7 @@
 
 
         <td>
-            <a href="{{ route('projects.show', [$project->slug]) }}">{{ $project->title }}</a>
+            <a href="{{ route('project.show', [$project->slug]) }}">{{ $project->title }}</a>
         </td>
         <td>
            @if($project->user)
