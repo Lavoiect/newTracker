@@ -7,11 +7,9 @@
     <div class="navContent">
          <div class="subBar">
             <i class="zmdi zmdi-account"></i> <i class="zmdi zmdi-chevron-right"></i> {{ $user->name }}'s Profile
+    </div>
 
-
-        </div>
-
-<div class="card profileCard" style="margin-top: 75px">
+<div class="card profileCard">
     <h3>Assigned Projects</h3>
 <ul>
     @foreach ($user->projects as $project)
@@ -21,5 +19,5 @@
     @endforeach
 </ul>
 </div>
-
+</div>
 @endsection

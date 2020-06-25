@@ -10940,6 +10940,13 @@ body {
     margin: 0 20px;
 }
 
+.profileCard {
+    position: relative;
+    top: 70px;
+    margin: 0 20px;
+    width: 50%;
+}
+
 /* SideNav Styles */
 .navbar {
     padding-left: 70px;
@@ -11091,11 +11098,6 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 .lineTitle {
     color: #00629b;
-}
-
-.profileCard {
-    margin: 15px;
-    width: 25%;
 }
 
 .profileCard h3 {
