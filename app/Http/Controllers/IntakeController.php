@@ -20,12 +20,14 @@ class IntakeController extends Controller
 
     public function store(Request $request)
     {
+
         if ($request->regions) {
             $regionString = implode(", ", $request->get('regions'));
             $request->merge(['regions' => $regionString]);
         }
         $rules = [
-            'projectName' => ['required', 'min:5', 'max:50']
+            'projectName' => ['required', 'min:5', 'max:50'],
+            'attach' => 'max:7097152'
         ];
         $this->validate($request, $rules);
         $input = $request->all();

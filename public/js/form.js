@@ -24,3 +24,10 @@ function showType() {
         }
     }
 }
+
+$('#formFile').bind('change', function () {
+    if (this.files[0].size > 7097152) {
+        alert(this.files[0].size + 'this is too big');
+    }
+
+});

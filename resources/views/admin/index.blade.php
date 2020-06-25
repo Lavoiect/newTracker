@@ -8,17 +8,51 @@
         <i class="zmdi zmdi-settings"></i> <i class="zmdi zmdi-chevron-right"></i>Admin Panel
     </div>
 
-             <div class="card adminContent">
-                <div class="card-body">
-                    <h5 class="card-title">Admin Panel</h5>
-                    <p class="card-text">Use this panel to make changes.</p>
-                        <div class="row">
-                            <div class="col-3"><a href="{{ route('projects.create') }}">Create Project</a></div>
-                            <div class="col-3"><a href="{{ route('projects.trash') }}">Trashed Projects</a></div>
-                            <div class="col-3"><a href="{{ route('categories.index') }}">Add Project Tab</a></div>
-                            <div class="col-3"><a href="{{ route('admin.projects') }}">Manage Projects</a></div>
+             <div class="adminContent">
+                 <div class="row">
+                    <div class="col-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Add Project</h5>
+                                <h2 class="card-text text-success">{{ $projects->count() }}</h2>
+                                <p class="text-muted">Active Projects</p>
+                                <a href="{{route('projects.create')}}" class="card-link">Create Project</a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Trash</h5>
+                                <h2 class="card-text text-danger">{{ $trashedProjects->count() }}</h2>
+                                <p class="text-muted">Trashed Projects</p>
+                                <a href="{{route('projects.trash')}}" class="card-link">View Trashed Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Tracker Tabs</h5>
+                                <h2 class="card-text text-info">{{ $tabs->count() }}</h2>
+                                <p class="text-muted">Current tabs</p>
+                                <a href="{{route('categories.index')}}" class="card-link">Manage Tabs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Drafts</h5>
+                                <h2 class="card-text text-warning">{{ $draftProjects->count() }}</h2>
+                                <p class="text-muted">Unpublished Projects</p>
+                                <a href="{{route('admin.projects')}}" class="card-link">Publish</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
 </div>
 

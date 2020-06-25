@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid content">
-   <section class="welcome">
+<div class="jumbotron">
+    <h3>Field Operations Learning Services</h3>
+    <h4>Intake and Request Form</h4>
+  </div>
+<div class="container-fluid intakeForm">
+   <section class="form">
 
  @if (session('added'))
              <div class="alert alert-success" role="alert">
@@ -10,13 +14,10 @@
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             </div>
             @endif
-  <div class="jumbotron">
-    <h3>Field Operations Learning Services</h3>
-    <h4>Intake and Request Form</h4>
-  </div>
+
 
   <form name="intakeForm" action="{{ route('intake.store') }}" method="post" enctype="multipart/form-data">
-  <div class="row">
+  <div class="row pt-3">
     <div class="col-6">
     <div class="form-group">
         <label for="projectName">Initiative Name:</label>
@@ -73,10 +74,34 @@
 <!-- New Training Section-->
 <div id="new">
   <div class="row">
-    <div class="form-group col-4">
-      <label for="projectScope">Project Scope:</label>
+    <div class="form-group col-4 mt-3">
+      <label>Project Scope:</label>
      <textarea class="form-control" name="projectScope" id="" cols="30" rows="5"></textarea>
     </div>
+    <div class="col-2"></div>
+    <div class="form-group col-6 mt-3">
+      <label for="projectScope">What areas for the training?</label>
+      <div class="row">
+            <div class="col-6">
+                <input type="checkbox" name="regions[]" value="All"><label for="">&nbsp All</label><br>
+                <input type="checkbox" name="regions[]" value="Northeast"><label for="">&nbspNortheast</label><br>
+                <input type="checkbox" name="regions[]" value="Northwest"><label for="">&nbspNorthwest</label><br>
+                <input type="checkbox" name="regions[]" value="Great Lakes"><label for="">&nbspGreat Lakes</label><br>
+                <input type="checkbox" name="regions[]" value="Southern Ohio"><label for="">&nbspSouthern Ohio</label><br>
+                <input type="checkbox" name="regions[]" value="South"><label for="">&nbspSouth</label><br>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" name="regions[]" value="West"><label for="">&nbspWest</label><br>
+                <input type="checkbox" name="regions[]" value="Central"><label for="">&nbspCentral</label><br>
+                <input type="checkbox" name="regions[]" value="Texas"><label for="">&nbspTexas</label><br>
+                <input type="checkbox" name="regions[]" value="Carolinas"><label for="">&nbspCarolinas</label><br>
+                <input type="checkbox" name="regions[]" value="Florida"><label for="">&nbspFlorida</label><br>
+                <input type="checkbox" name="regions[]" value="NYC"><label for="">&nbspNYC</label><br>
+            </div>
+        </div>
+
+    </div>
+
 </div>
   <div class="row">
     <div class="col-3">
@@ -86,24 +111,14 @@
         <option>No</option>
       </select>
     </div>
-  </div>
-
-  <p>What areas for the training?</p>
-
-    <input type="checkbox" name="regions[]" value="All"><label for="">All</label>
-    <input type="checkbox" name="regions[]" value="Northeast"><label for="">Northeast</label>
-    <input type="checkbox" name="regions[]" value="Northwest"><label for="">Northwest</label>
-    <input type="checkbox" name="regions[]" value="Great Lakes"><label for="">Great Lakes</label>
-    <input type="checkbox" name="regions[]" value="Southern Ohio"><label for="">Southern Ohio</label>
-    <input type="checkbox" name="regions[]" value="South"><label for="">South</label>
-    <input type="checkbox" name="regions[]" value="West"><label for="">West</label>
-    <input type="checkbox" name="regions[]" value="Central"><label for="">Central</label>
-    <input type="checkbox" name="regions[]" value="Texas"><label for="">Texas</label>
-    <input type="checkbox" name="regions[]" value="Carolinas"><label for="">Carolinas</label>
-    <input type="checkbox" name="regions[]" value="Florida"><label for="">Florida</label>
-    <input type="checkbox" name="regions[]" value="NYC"><label for="">NYC</label>
 
     </div><!-- End of new training section -->
+
+
+
+  </div>
+
+
 
     <!-- Update Section of form -->
     <div id="update">
@@ -122,7 +137,7 @@
 
     </div>
 
-    <input type="file" name="attach">
+    <input type="file" name="attach" id="formFile">
     <!--
     <input type="file" name="attach2" id="attach2" onchange="contentChange('attach3')">
     <input type="file" name="attach3" id="attach3" onchange="contentChange('attach4')">
@@ -140,4 +155,5 @@
 
 
 </div>
+
 @endsection

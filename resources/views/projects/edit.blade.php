@@ -30,7 +30,8 @@ hiynjhknljiyhj kpmokkyhonl6yhlkgpfd;tighkoytyihk]]
  <h4>Edit Project:</h4>
 
  <div class="row">
-     <div class="col-2"> <form action="{{ route('projects.update', $project->id) }}" method="post">
+     @if (Auth::user() && Auth::user()->role_id === 1)
+         <div class="col-2"> <form action="{{ route('projects.update', $project->id) }}" method="post">
                     {{ method_field('patch') }}
                         <input name="isComplete" type="checkbox" value="1" checked style="display: none">
                         <input type="checkbox" value="3" name="category_id[]" class="form-chech-input" checked style="display: none">
@@ -38,6 +39,8 @@ hiynjhknljiyhj kpmokkyhonl6yhlkgpfd;tighkoytyihk]]
                     {{ csrf_field()}}
     </form>
 </div>
+     @endif
+
      <div class="col-2">
             <form action="{{ route('projects.update', $project->id) }}" method="post">
                                 {{ method_field('patch') }}
