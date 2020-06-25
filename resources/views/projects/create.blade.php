@@ -42,7 +42,7 @@
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label for="body">Body</label>
+                    <label for="body">Project Notes</label>
                     <textarea name="body" class="form-control my-editor">{!! old('body') !!}</textarea>
                 </div>
             </div>
