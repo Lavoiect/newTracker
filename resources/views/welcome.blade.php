@@ -63,7 +63,7 @@
 
 
 
-            @elseif ($project->dueDate < $thisweek->addWeek())
+            @elseif ($project->dueDate > $thisweek->addWeek())
                 <span class="badge badge-warning">Due this week</span>
 
             @else
