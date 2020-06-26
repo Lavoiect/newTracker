@@ -100,7 +100,7 @@
                          {{ $project->stakeholder }}
                     </td>
                 <td>
-                   {{ $project->dueDate }}
+                   {{ $project->dueDate->toFormattedDateString() }}
                 </td>
 
                  </tr>
