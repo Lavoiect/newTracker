@@ -90,10 +90,10 @@ hiynjhknljiyhj kpmokkyhonl6yhlkgpfd;tighkoytyihk]]
 
         <div class="row">
             <div class="col-6">
-                 <div class="form-group">
+              <!--   <div class="form-group">
                     <label for="dueDate">Due Date</label>
                     <input type="date" name="dueDate" class="form-control" value="{{$project->dueDate}}">
-        </div>
+        </div>-->
 
         <div class="form-group">
                     <label for="submittedBy">Submitted By</label>
