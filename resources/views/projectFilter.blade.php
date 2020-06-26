@@ -87,7 +87,7 @@
          {{ $project->scope }}
         </td>
          <td>
-            {{ $project->dueDate }}
+            {{ $project->dueDate->toFormattedDateString() }}
         </td>
          <td>
             {{ $project->submittedBy }}
