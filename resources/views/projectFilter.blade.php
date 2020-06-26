@@ -39,8 +39,14 @@
 
         @foreach ($category->project as $project)
       <tr>
+
+
+
+
+
         <th scope="row">
-            @if($project->isComplete == 1)
+
+@if($project->isComplete == 1)
                 <span class="badge badge-primary">Complete</span>
 
             @elseif($project->isReview == 1)
@@ -63,14 +69,7 @@
             @else
                 <span class="badge badge-success">On Track</span>
             @endif
-        </th>
-        <td>
-            <a href="{{ route('project.show', [$project->slug]) }}">{{ $project->title }}</a>
-        </td>
-        <td>
-            @if($project->user)
-            {{ $project->user->name }}
-            @endif
+
         </th>
 
 
@@ -88,7 +87,7 @@
          {{ $project->scope }}
         </td>
          <td>
-            {{ $project->dueDate }}
+            {{ $project->dueDate->toFormattedDateString() }}
         </td>
          <td>
             {{ $project->submittedBy }}
