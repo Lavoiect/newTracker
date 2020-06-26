@@ -45,6 +45,7 @@
 
       <tr>
         <th scope="row">
+
             @if($project->isComplete == 1)
                 <span class="badge badge-primary">Complete</span>
 
@@ -62,12 +63,12 @@
 
 
 
-            @elseif (strtotime($project->dueDate) > strtotime($today) && strtotime($project->dueDate) + strtotime($today) < 3195652080)
+            @elseif ($project->dueDate < $thisweek->addWeek())
                 <span class="badge badge-warning">Due this week</span>
 
             @else
                 <span class="badge badge-success">On Track</span>
-        @endif
+            @endif
         </th>
         <td>
             <a href="{{ route('project.show', [$project->slug]) }}">{{ $project->title }}</a>
@@ -82,7 +83,9 @@
          {{ $project->scope }}
         </td>
          <td>
-            {{ $project->dueDate }}
+             @if($project->dueDate)
+            {{ $project->dueDate->toFormattedDateString() }}
+            @endif
         </td>
          <td>
             {{ $project->submittedBy }}

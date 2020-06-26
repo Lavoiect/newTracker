@@ -16,12 +16,13 @@ class ProjectController extends Controller
     {
 
         $today = \Carbon\Carbon::now();
+        $thisweek = \Carbon\Carbon::now();
         $categories = Category::get();
         $projects = Project::where('status', 1)->latest()->get();
 
 
 
-        return view('welcome', compact('today'))
+        return view('welcome', compact(['today', 'thisweek']))
             ->withProjects($projects)
             ->withCategories($categories);
     }

@@ -65,10 +65,11 @@ class CategoryController extends Controller
     public function filteredProjects($slug)
     {
         $today = \Carbon\Carbon::now();
+        $thisweek = \Carbon\Carbon::now();
         $categories = Category::get();
         $category = Category::where('slug', $slug)->first();
 
-        return view('projectFilter', compact(['category', 'categories', 'today']));
+        return view('projectFilter', compact(['category', 'categories', 'today', 'thisweek']));
     }
 
     public function noEdit($slug)
