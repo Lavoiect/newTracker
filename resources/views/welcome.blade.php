@@ -40,10 +40,11 @@
     <tbody>
 
 
+
         @foreach ($projects as $project)
+
       <tr>
         <th scope="row">
-
             @if($project->isComplete == 1)
                 <span class="badge badge-primary">Complete</span>
 
@@ -53,19 +54,21 @@
             @elseif (strtotime($project->dueDate) == null)
                 <span class="badge badge-info">N/A</span>
 
-            @elseif (strtotime($today) - strtotime($project->dueDate) >= 0 )
-                <span class="badge badge-danger">Past Due</span>
+            @elseif ($project->dueDate->isToday())
+                <span class="badge badge-info">Due Today</span>
 
-            @elseif (strtotime($today) - strtotime($project->dueDate) <= -18804 && strtotime($today) - strtotime($project->dueDate) >= -191604)
+            @elseif (strtotime($project->dueDate) < strtotime($today))
+                        <span class="badge badge-danger">Past Due</span>
+
+
+
+            @elseif (strtotime($project->dueDate) > strtotime($today) && strtotime($project->dueDate) + strtotime($today) < 3195652080)
                 <span class="badge badge-warning">Due this week</span>
 
             @else
                 <span class="badge badge-success">On Track</span>
-
         @endif
         </th>
-
-
         <td>
             <a href="{{ route('project.show', [$project->slug]) }}">{{ $project->title }}</a>
         </td>
@@ -75,7 +78,6 @@
             @endif
         </td>
         <td>
-
 
          {{ $project->scope }}
         </td>
