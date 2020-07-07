@@ -61,8 +61,7 @@
             @elseif (strtotime($project->dueDate) < strtotime($today))
                         <span class="badge badge-danger">Past Due</span>
 
-
-
+            @else
                 <span class="badge badge-success">On Track</span>
             @endif
 
