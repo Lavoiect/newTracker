@@ -8,7 +8,8 @@
          <div class="subBar">
             <i class="zmdi zmdi-account"></i> <i class="zmdi zmdi-chevron-right"></i> {{ $user->name }}'s Profile
     </div>
-
+<div id="app">
+</div>
 <div class="card profileCard">
     <h3>Assigned Projects</h3>
 <ul>
@@ -20,4 +21,5 @@
 </ul>
 </div>
 </div>
+
 @endsection

@@ -37,9 +37,9 @@ hiynjhknljiyhj kpmokkyhonl6yhlkgpfd;tighkoytyihk]]
                         <input type="checkbox" value="3" name="category_id[]" class="form-chech-input" checked style="display: none">
                         <button class="btn btn-success" type="submit">Complete</button>
                     {{ csrf_field()}}
-    </form>
+                </form>
 </div>
-     @endif
+
 
      <div class="col-2">
             <form action="{{ route('projects.update', $project->id) }}" method="post">
@@ -49,6 +49,7 @@ hiynjhknljiyhj kpmokkyhonl6yhlkgpfd;tighkoytyihk]]
                                 {{ csrf_field()}}
                 </form>
      </div>
+      @endif
  </div>
 
 
