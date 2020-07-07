@@ -42,12 +42,15 @@ hiynjhknljiyhj kpmokkyhonl6yhlkgpfd;tighkoytyihk]]
 
 
      <div class="col-2">
-            <form action="{{ route('projects.update', $project->id) }}" method="post">
+         @if ($project->isReview === 0)
+             <form action="{{ route('projects.update', $project->id) }}" method="post">
                                 {{ method_field('patch') }}
                                     <input name="isReview" type="checkbox" value="1" checked style="display: none">
                                     <button class="btn btn-warning" type="submit">Under Review</button>
                                 {{ csrf_field()}}
                 </form>
+         @endif
+
                 @if ($project->isReview === 1)
                     <form action="{{ route('projects.update', $project->id) }}" method="post">
                                 {{ method_field('patch') }}
