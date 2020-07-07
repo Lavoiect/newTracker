@@ -48,6 +48,15 @@ hiynjhknljiyhj kpmokkyhonl6yhlkgpfd;tighkoytyihk]]
                                     <button class="btn btn-warning" type="submit">Under Review</button>
                                 {{ csrf_field()}}
                 </form>
+                @if ($project->isReview === 1)
+                    <form action="{{ route('projects.update', $project->id) }}" method="post">
+                                {{ method_field('patch') }}
+                                    <input name="isReview" type="checkbox" value="0" checked style="display: none">
+                                    <button class="btn btn-warning" type="submit">Out of Review</button>
+                                {{ csrf_field()}}
+                    </form>
+                @endif
+
      </div>
       @endif
  </div>
