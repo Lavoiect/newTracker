@@ -65,8 +65,8 @@
     </div>
     <div class="col-3">
         <h5 class="lineTitle mt-3">Attachment:</h5>
-        @if($intake->attach)
-            <a href="/images/intake_attachments/{{ $intake->attach }}">Attachment</a>
+        @if($project->attachment)
+            <a href="/images/intake_attachments/{{ $project->attachment }}">Attachment</a>
         @endif
     </div>
 </div>
