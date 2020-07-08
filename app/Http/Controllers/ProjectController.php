@@ -46,7 +46,7 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'title' => ['required', 'min:10', 'max:50']
+            'title' => ['required', 'min:4', 'max:50']
         ];
         $this->validate($request, $rules);
         $input = $request->all();
