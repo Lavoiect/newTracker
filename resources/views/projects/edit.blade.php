@@ -114,6 +114,11 @@ hiynjhknljiyhj kpmokkyhonl6yhlkgpfd;tighkoytyihk]]
         </div>
 
         <div class="form-group">
+            <label for="submittedBy">Subject Matter Expert</label>
+            <input type="text" name="sme" class="form-control" value="{{$project->sme}}">
+</div>
+
+        <div class="form-group">
                     <label for="stakeholder">Stakeholder</label>
                     <input type="text" name="stakeholder" class="form-control" value="{{$project->stakeholder}}">
         </div>

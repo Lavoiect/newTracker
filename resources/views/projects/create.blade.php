@@ -39,6 +39,10 @@
                     <label for="title">Title</label>
                     <input type="text" class="form-control" name="title">
                 </div>
+                <div class="form-group">
+                    <label for="title">Subject Matter Expert</label>
+                    <input type="text" class="form-control" name="sme">
+                </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
