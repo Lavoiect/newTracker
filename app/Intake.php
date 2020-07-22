@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Intake extends Model
 {
+    protected $dates = ['dueDate', 'intakeDate',];
     protected $fillable = [
         'projectName',
         'submittedBy',
