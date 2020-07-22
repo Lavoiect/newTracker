@@ -28,7 +28,9 @@ class Project extends Model
         'fcid',
         'whatUpdate',
         'describe',
-        'requestType'
+        'requestType',
+        'intakeDate',
+        'sme'
     ];
 
     public function category()

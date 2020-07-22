@@ -34,7 +34,7 @@
 <div id="collapse_{{ $intake->id }}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
         <div class="row">
-            <div class="col-6"><h4>Initiative Name</h4> {{$intake->projectName}}</div>
+        <div class="col-6"><h4>Initiative Name</h4> {{$intake->projectName}} itake date {{$intake->created_at}}</div>
             <div class="col-6"><h4>Due Date</h4> {{$intake->dueDate}}</div>
         </div>
 
@@ -74,6 +74,7 @@
     <div class="hidden">
         <div class="row">
     <div class="col-6">
+    <input type="text" name="intakeDate" value="{{$intake->created_at}}">
     <div class="form-group">
         <label for="projectName">Initiative Name:</label>
     <input name="title" required type="text" class="form-control" minlength="5" value="{{$intake->projectName}}">

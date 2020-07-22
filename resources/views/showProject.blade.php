@@ -26,11 +26,15 @@
         <h5 class="lineTitle">Project Scope:</h5>
         {{$project->scope}}
     </div>
-    <div class="col-">
+    <div class="col-6">
         <div class="row">
-            <div class="col-12">
+            <div class="col-6">
                 <h5 class="lineTitle">Due Date:</h5>
                 {{$project->dueDate}}
+            </div>
+            <div class="col-6">
+                <h5 class="lineTitle">Intake Date:</h5>
+                {{$project->intakeDate}}
             </div>
             <div class="col-12">
                 <h5 class="lineTitle mt-3">Lead Developer</h5>
@@ -45,13 +49,17 @@
   </div>
 
 <div class="row">
-    <div class="col-6">
+    <div class="col-4">
         <h5 class="lineTitle mt-3">Stakeholder:</h5>
         {{ $project->stakeholder }}
     </div>
-    <div class="col-6">
+    <div class="col-4">
         <h5 class="lineTitle mt-3">Submitted By:</h5>
        {{$project->submittedBy}}
+    </div>
+    <div class="col-4">
+        <h5 class="lineTitle mt-3">Subject Matter Expert:</h5>
+       {{$project->sme}}
     </div>
 </div>
 
