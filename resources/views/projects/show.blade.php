@@ -34,9 +34,21 @@
     </div>
     <div class="col-">
         <div class="row">
-            <div class="col-12">
+            <div class="col-6">
+
                 <h5 class="lineTitle">Due Date:</h5>
-                {{$project->dueDate}}
+                @if ($project->dueDate)
+                {{$project->dueDate->toFormattedDateString()}}
+                @endif
+
+            </div>
+            <div class="col-6">
+
+                <h5 class="lineTitle">Intake Date:</h5>
+                @if ($project->intakeDate)
+                {{ $project->intakeDate->toFormattedDateString() }}
+                @endif
+
             </div>
             <div class="col-12">
                 <h5 class="lineTitle mt-3">Lead Developer</h5>
