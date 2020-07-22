@@ -24,7 +24,12 @@ class CreateProjectsTable extends Migration
             $table->date('dueDate')->nullable();
             $table->string('submittedBy')->nullable();
             $table->string('stakeholder')->nullable();
-            $table->string('sme')->nullable();
+            $table->string('requestType')->nullable();
+            $table->string('performMetric')->nullable();
+            $table->string('whatUpdate')->nullable();
+            $table->text('describe')->nullable();
+            $table->string('sme', 55)->nullable();
+            $table->string('fcid', 55)->nullable();
             $table->date('intakeDate')->nullable();
             $table->integer('status')->default(1);
             $table->integer('isReview')->default(0);
