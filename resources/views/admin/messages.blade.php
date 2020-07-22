@@ -84,7 +84,7 @@
   <div class="col-4">
     <div class="form-group">
         <label >Due Date:</label>
-        <input name="dueDate" type="date" class="form-control" value="{{$intake->dueDate}}">
+        <input name="dueDate" type="text" class="form-control" value="{{$intake->dueDate}}">
     </div>
   </div>
 
