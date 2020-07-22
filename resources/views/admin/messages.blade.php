@@ -35,7 +35,7 @@
       <div class="card-body">
         <div class="row">
         <div class="col-4"><h4>Initiative Name</h4> {{$intake->projectName}}</div>
-            <div class="col-4"><h4>Due Date</h4> {{$intake->dueDate->toFormattedDateString()}}</div>
+            <div class="col-4"><h4>Due Date</h4> {{$intake->dueDate</div>
             <div class="col-4"><h4>Intake Date</h4> {{$intake->created_at->toFormattedDateString()}}</div>
         </div>
 
