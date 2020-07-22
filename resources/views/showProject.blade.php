@@ -30,7 +30,11 @@
         <div class="row">
             <div class="col-6">
                 <h5 class="lineTitle">Due Date:</h5>
+                @if ($project->dueDate->)
                 {{$project->dueDate->toFormattedDateString() }}
+                @endif
+
+
             </div>
             <div class="col-6">
                 <h5 class="lineTitle">Intake Date:</h5>
