@@ -33,7 +33,7 @@
         <th  data-sortable="true" data-field="project">Project</th>
         <th  data-sortable="true">Lead Developer</th>
         <th  data-sortable="true">Scope</th>
-        <th  data-sortable="true">Due Date</th>
+        <th  data-sortable="true">Production Date</th>
         <th  data-sortable="true">Submitted By</th>
       </tr>
     </thead>

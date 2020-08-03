@@ -42,7 +42,7 @@
                         <th scope="col">Project Name</th>
                         <th scope="col">Project Lead</th>
                         <th scope="col">Stakeholder</th>
-                        <th scope="col">Due Date</th>
+                        <th scope="col">Production Date</th>
                     </tr>
                </thead>
                <tbody>
