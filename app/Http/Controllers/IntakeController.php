@@ -42,7 +42,7 @@ class IntakeController extends Controller
 
         $intake = Intake::create($input);
 
-        return redirect('/intake')->with('added', 'You have successfully submitted the intake form.');
+        return redirect('/intake')->with('added', 'Thank you for submitting a request to the Field Operations Learning Services team.  Please note that our primary strategic focus for Q4 2020 is implementing critical updates to our Field Technician Onboarding Program.  All new requests received after October 15, 2020 will be prioritized accordingly.  For urgent requests, please reach out to Abbie O’Dell directly with details of the project for assistance.');
     }
 
     public function update(Request $request, $id)
