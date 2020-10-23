@@ -1,5 +1,4 @@
-alert('test');
-console.log('test');
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
