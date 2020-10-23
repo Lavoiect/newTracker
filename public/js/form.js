@@ -1,4 +1,4 @@
-alert("Testing in progress")
+
 window.onload = function showMessage (){
     var popUp = document.getElementById('popUp');
     if(popUp.style.display = 'none'){
