@@ -1,4 +1,3 @@
-
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -87,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./resources/js/app.js":
+/*!*****************************!*\
+  !*** ./resources/js/app.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -105,7 +115,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!(function webpackMissingModule() { var e = new Error("Cannot find module '/Users/p2753973/laravel_Projects/newTracker/resources/js/app.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+__webpack_require__(/*! /Users/p2753973/laravel_Projects/newTracker/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/p2753973/laravel_Projects/newTracker/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
