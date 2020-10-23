@@ -3,14 +3,14 @@
 @section('content')
 <script src="{{ asset('js/form.js') }}" defer></script>
 <div id="contentArea">
-    <div class="alertBox" id="popUp">
+  <!--  <div class="alertBox" id="popUp">
         <div class="box">
             <p>
                 Thank you for submitting a request to the Field Operations Learning Services team. <br>  Please note that our primary strategic focus for Q4 2020 is implementing critical updates to our Field Technician Onboarding Program.  All new requests received after October 15, 2020 will be prioritized accordingly.  For urgent requests, please reach out to Abbie O’Dell directly with details of the project for assistance.
             </p>
             <button class="btn btn-primary" onclick="dismissWarning()">I Agree</button>
         </div>
-    </div>
+    </div> -->
     <div class="jumbotron">
         <h3>Field Operations Learning Services</h3>
         <h4>Intake and Request Form</h4>
