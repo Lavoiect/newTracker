@@ -1,3 +1,16 @@
+
+window.onload = function showMessage (){
+    var popUp = document.getElementById('popUp');
+    if(popUp.style.display = 'none'){
+        popUp.style.display = 'block'
+    }
+};
+function dismissWarning(){
+    if(popUp.style.display = 'block'){
+        popUp.style.display = 'none'
+    }
+}
+
 function showType() {
 
     var newSection = document.getElementById('new');
