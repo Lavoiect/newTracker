@@ -9,7 +9,7 @@
             <p>
                 Thank you for submitting a request to the Field Operations Learning Services team. <br>  Please note that our primary strategic focus for Q4 2020 is implementing critical updates to our Field Technician Onboarding Program.  All new requests received after October 15, 2020 will be prioritized accordingly.  For urgent requests, please reach out to Abbie O’Dell directly with details of the project for assistance.
             </p>
-            <button class="btn btn-primary" onclick="dismissWarning()">I Agree</button>
+            <button class="btn btn-primary" onclick="dismissWarning()">OK</button>
         </div>
     </div>
     <div class="jumbotron">
